@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/school-pro-it/static/css/main.e2a675cb.css",
+    "main.js": "/school-pro-it/static/js/main.27d94f92.js",
+    "index.html": "/school-pro-it/index.html",
+    "main.e2a675cb.css.map": "/school-pro-it/static/css/main.e2a675cb.css.map",
+    "main.27d94f92.js.map": "/school-pro-it/static/js/main.27d94f92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2a675cb.css",
+    "static/js/main.27d94f92.js"
+  ]
+}
