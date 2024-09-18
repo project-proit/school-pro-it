@@ -9,7 +9,7 @@ a:hover {
 }
 
 .header_contacts {
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: #81E7EE;
   border-radius: 2rem;
   color: #015073;
@@ -23,7 +23,8 @@ a:hover {
   text-align: center;
   max-height: 100px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content:space-evenly;
   background-color: #6C6EBB;
 }
 
@@ -35,18 +36,18 @@ a:hover {
 }
 
 .logo_school {
-  width: 100%;
+  width: 150%;
 }
 
 .logo_office {
-  width: 100%;
+  width: 150%;
 }
 
 .menu {
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: 100%;
+  font-size: 150%;
   gap: 60px;
   color: #ffff;
 }
@@ -60,7 +61,7 @@ a:hover {
     display: block;
     position: absolute;
     right: 20px;
-    top: 37px;
+    top: 45px;
     cursor: pointer;
     z-index: 10;
     color:aliceblue;
@@ -82,13 +83,11 @@ a:hover {
   }
 
   .logo_school {
-    width: 80%;
-    height: 80%;
+    width: 30%;
   }
 
   .logo_office {
-    width: 80%;
-    height: 80%;
+    width: 30%;
   }
 
   .menu {

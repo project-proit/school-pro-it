@@ -1,0 +1,195 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #ffff;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    width: 715px;
+    height: 857px;
+    align-items: center;
+}
+
+.container__form {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Пробел между кнопками */
+    margin-top: auto; /* Располагает кнопки внизу контейнера */
+    position: fixed;
+    bottom: 50px; /* Отступ от низа страницы */
+    left: 50%;
+    transform: translateX(-50%); /* Центрирует кнопки по горизонтали */
+    z-index: 1000;
+}
+
+.modal__content.active {
+    transform: scale(1);
+}
+
+.field p {
+    padding: 6px;
+}
+
+.first-field {
+    padding-top: 59px;
+    padding-bottom: 34px;
+}
+
+.second-field {
+    padding-bottom: 79px;
+}
+
+.btn-back, .btn-next {
+    color: #ffff;
+    border-radius: 50px;
+    width: 250px;
+    height: 80px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: #81E7EE;
+    border: 3px solid #81E7EE;
+}
+
+.btn-next {
+    background-color: #C494EA;
+    border: 3px solid #C494EA;
+}
+
+.btn-back:hover, .btn-next:hover {
+    background-color: #ffff;
+    border: 3px solid inherit;
+    color: #BDBCF8;
+    transform: scale(0.95);
+    transition: 0.8s all;
+}
+
+.form0 {
+    padding: 65px 57px;
+    align-items: center;
+    text-align: center;
+}
+
+.header1 h1 {
+    font-size: 40px;
+    color: #3D3F68;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form0 input {
+    width: 507px;
+    height: 85px;
+    text-decoration-style: none;
+}
+
+.form0 p {
+    color: #BDBCF8;
+    text-align: left;
+    padding-left: 55px;
+}
+
+.btn-type-of-learning {
+    padding-left: 43px;
+    border-radius: 50px;
+    border-color: #BDBCF8;
+    border: 3px solid #BDBCF8;
+    color: #BDBCF8;
+    font-size: medium;
+    background-color: white;
+    width: 507px;
+    height: 85px;
+    font-size: 30px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.btn-type-of-learning:hover {
+    color: #81E7EE;
+    border: 4px solid #81E7EE;
+}
+
+.btn-type-of-learning.selected {
+    border: 4px solid #BDBCF8;
+}
+
+.checkmark {
+    right: 90%;
+    transform: translateY(-50%);
+    color: #81E7EE;
+}
+
+.field__input {
+    padding-left: 43px;
+    border-radius: 50px;
+    border-color: #BDBCF8;
+    border: 3px solid #BDBCF8;
+    color: #BDBCF8;
+    font-size: medium;
+    background-color: white;
+    width: 507px;
+    height: 85px;
+    font-size: 30px;
+    text-align: left;
+    cursor: pointer;
+}
+.form1 {
+    padding: 65px 57px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-type-of-learning + .btn-type-of-learning {
+    margin-top: 20px;
+}
+
+.form1 .header1 {
+    margin-bottom: 50px;
+}
+
+.form1 p {
+    color: #938FBE;
+    font-size: 18px;
+    padding: 25px;
+    text-align: center;
+}
+
+.form2 {
+    padding: 65px 57px;
+    color: #938FBE;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+}
+
+.form2 h1 {
+    margin-bottom: 50px;
+}
+
+
+.form2 p + p {
+    margin: 30px;
+}
