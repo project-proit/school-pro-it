@@ -41,7 +41,7 @@ const Form = ({active, setActive, children}) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/student', {
+      const response = await fetch('http://localhost:4000/api/student', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

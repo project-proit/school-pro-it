@@ -1,0 +1,41 @@
+.header {
+    margin: 0px 0px;
+    padding-top: 10px;
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content:space-between;
+    background: #474BAE;
+    padding: 0 120px;
+}
+
+.logos {
+    display: flex;
+    gap: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #ffff;
+    text-decoration: underline;
+}
+
+.arrow-back-menu {
+    width: 70px;
+    height: 60px;
+    color: #ffff;
+}

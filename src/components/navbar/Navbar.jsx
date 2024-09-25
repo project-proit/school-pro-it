@@ -3,6 +3,7 @@ import style from './Navbar.module.css';
 import Logo from '../../assets/LogoSchool.png';
 import LogoText from '../../assets/LogoOffice.png';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -34,16 +35,16 @@ const Navbar = () => {
               }
             >
               <li>
-                <a href='##'>Главная</a>
+                <Link to='/'>Главная</Link>
               </li>
               <li>
-                <a href='##'>Направления</a>
+                <Link to='/specialties'>Направления</Link>
               </li>
               <li>
-                <a href='##'>О школе</a>
+                <Link to='/about'>О школе</Link>
               </li>
               <li>
-                <a href='##' className={style.header_contacts}>Контакты</a>
+                <Link to='/contacts' className={style.header_contacts}>Контакты</Link>
               </li>
             </ul>
             <div onClick={() => setNav(!nav)} className={style.mobile_btn}>

@@ -1,15 +1,31 @@
-import Navbar from './components/navbar/Navbar';
 import './index.css';
-import Form from "./components/modal form/Form"
-import { useState } from 'react';
+import React from 'react';
+import AdminMain from './pages/AdminPage/AdminMain';
+import Layout from './components/Layout';
+import About from './pages/About'
+import Main from './pages/Main'
+import Intensives from './pages/Intensives'
+import Specialties from './pages/Specialties'
+import { Routes, Route } from 'react-router-dom';
+import Notfoundpage from './pages/Notfoundpage';
+import LayoutAdmin from './components/LayoutAdmin';
 
 function App() {
-  const [modalActive, setModalActive] = useState(false);
   return (
     <div>
-      <Navbar />
-      <button onClick={() => setModalActive(true)}>Click me</button>
-      <Form active={modalActive} setActive={setModalActive} />
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Main />} />
+            <Route path='about' element={<About />} />
+            <Route path='intensives' element={<Intensives />} />
+            <Route path='specialties' element={<Specialties />} />
+            <Route path='*' element={<Notfoundpage />} />
+          </Route>
+          <Route path='admin' element={<LayoutAdmin />}>
+            <Route index element={<AdminMain />} />
+            <Route path='*' element={<Notfoundpage />} />
+          </Route>
+        </Routes>
     </div>
   );
 }

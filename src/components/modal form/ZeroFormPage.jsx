@@ -8,6 +8,7 @@ const ZeroFormPage = ({ formData, setFormData }) => {
     setFormData({ ...formData, typeOfLearning: type });
     setSelectedOption(option);
   };
+  
   return (
     <div className='form0'>
       <div className='header1'><h1>Выберите формат обучения!</h1></div>
@@ -36,7 +37,6 @@ const ZeroFormPage = ({ formData, setFormData }) => {
               <p> {'\u00A0'} Цена: 3500 руб / месяц</p>
             </div>
           </div>
-          
         </form>
     </div>
   )

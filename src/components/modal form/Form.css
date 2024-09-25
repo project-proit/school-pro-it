@@ -21,25 +21,25 @@
 .modal__content {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 30px;
+    padding: 2rem;
+    border-radius: 2rem;
     background-color: #ffff;
     transform: scale(0.5);
     transition: 0.4s all;
-    width: 715px;
-    height: 857px;
+    width: 37vw;
+    height: 92vh;
     align-items: center;
 }
 
 .container__form {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Пробел между кнопками */
-    margin-top: auto; /* Располагает кнопки внизу контейнера */
+    gap: 1.5rem;
+    margin-top: auto;
     position: fixed;
-    bottom: 50px; /* Отступ от низа страницы */
+    bottom: 3rem;
     left: 50%;
-    transform: translateX(-50%); /* Центрирует кнопки по горизонтали */
+    transform: translateX(-50%);
     z-index: 1000;
 }
 
@@ -48,24 +48,24 @@
 }
 
 .field p {
-    padding: 6px;
+    padding: 0.3rem;
 }
 
 .first-field {
-    padding-top: 59px;
-    padding-bottom: 34px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .second-field {
-    padding-bottom: 79px;
+    padding-bottom: 4rem;
 }
 
 .btn-back, .btn-next {
     color: #ffff;
     border-radius: 50px;
-    width: 250px;
-    height: 80px;
-    font-size: 25px;
+    width: 15vw;
+    height: 10vh;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -88,41 +88,41 @@
 }
 
 .form0 {
-    padding: 65px 57px;
+    padding: 3rem 4rem;
     align-items: center;
     text-align: center;
 }
 
 .header1 h1 {
-    font-size: 40px;
+    font-size: 220%;
     color: #3D3F68;
     font-weight: 400;
     text-align: center;
 }
 
 .form0 input {
-    width: 507px;
-    height: 85px;
+    width: 17vw;
+    height: 10vh;
     text-decoration-style: none;
 }
 
 .form0 p {
     color: #BDBCF8;
     text-align: left;
-    padding-left: 55px;
+    padding-left: 3.5rem;
 }
 
 .btn-type-of-learning {
-    padding-left: 43px;
-    border-radius: 50px;
+    padding-left: 2.3rem;
+    border-radius: 3rem;
     border-color: #BDBCF8;
     border: 3px solid #BDBCF8;
     color: #BDBCF8;
     font-size: medium;
     background-color: white;
-    width: 507px;
-    height: 85px;
-    font-size: 30px;
+    width: 25vw;
+    height: 9vh;
+    font-size: 1.7rem;
     text-align: left;
     cursor: pointer;
 }
@@ -143,53 +143,124 @@
 }
 
 .field__input {
-    padding-left: 43px;
-    border-radius: 50px;
+    padding-left: 2.3rem;
+    border-radius: 3rem;
     border-color: #BDBCF8;
     border: 3px solid #BDBCF8;
     color: #BDBCF8;
     font-size: medium;
     background-color: white;
-    width: 507px;
-    height: 85px;
-    font-size: 30px;
+    width: 25vw;
+    height: 9vh;
+    font-size: 2.9rem;
     text-align: left;
     cursor: pointer;
 }
+
 .form1 {
-    padding: 65px 57px;
+    padding: 3rem 3.5rem;
     align-items: center;
     text-align: center;
 }
 
 .btn-type-of-learning + .btn-type-of-learning {
-    margin-top: 20px;
+    margin-top: 0.8rem;
 }
 
 .form1 .header1 {
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 
 .form1 p {
     color: #938FBE;
-    font-size: 18px;
-    padding: 25px;
+    font-size: 1rem;
+    padding: 1rem;
     text-align: center;
 }
 
 .form2 {
-    padding: 65px 57px;
+    padding: 3rem 4rem;
     color: #938FBE;
-    font-size: 18px;
+    font-size: 1.3rem;
     align-items: center;
     text-align: center;
 }
 
 .form2 h1 {
-    margin-bottom: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-
 .form2 p + p {
-    margin: 30px;
+    margin: 2rem;
+}
+
+@media (max-width: 720px) {
+    .modal__content {
+        width: 100vw;
+        height: 80vh;
+        padding: 0.1rem;
+    }
+
+    .field p {
+        padding: 0.1rem;
+    }
+    
+    .first-field {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .second-field {
+        padding-bottom: 2rem;
+    }
+
+    .btn-back, .btn-next {
+        color: #ffff;
+        border-radius: 50px;
+        width: 35vw;
+        height: 10vh;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+    .btn-back {
+        background-color: #81E7EE;
+        border: 3px solid #81E7EE;
+    }
+    
+    .btn-next {
+        background-color: #C494EA;
+        border: 3px solid #C494EA;
+    }
+    
+    .btn-back:hover, .btn-next:hover {
+        background-color: #ffff;
+        border: 3px solid inherit;
+        color: #BDBCF8;
+        transform: scale(0.95);
+        transition: 0.8s all;
+    }
+    
+    .form0 {
+        padding: 1.5rem 3rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header1 h1 {
+        font-size: 1.5rem;
+        color: #3D3F68;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .btn-type-of-learning {
+        padding-left: 2.3rem;
+        border-radius: 3rem;
+        background-color: white;
+        width: 75vw;
+        height: 11vh;
+        font-size: 1.7rem;
+    }
 }
