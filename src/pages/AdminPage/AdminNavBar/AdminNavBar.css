@@ -2,8 +2,8 @@
     margin: 0px 0px;
     padding-top: 10px;
     background: transparent;
-    width: 100%;
     position: fixed;
+    width: 100%;
     z-index: 1000;
 }
 

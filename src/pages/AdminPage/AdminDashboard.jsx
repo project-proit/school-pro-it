@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineUserDelete } from "react-icons/ai";
+import { RiUserSettingsLine } from "react-icons/ri";
+import AddUser from './AddUser';
 import axios from 'axios';
 import './Admin.css';
 
 const AdminDashboard = () => {
     const [records, setRecords] = useState([]);
+    const [modalActive, setModalActive] = useState(false);
 
-    // Задаём массив с выбранными полями в нужном порядке
     const columns = [
         { key: 'id', label: 'ID' },
         { key: 'fullName', label: 'Полное имя' },
-        // { key: 'typeOfLearning', label: 'Тип обучения' },
-        { key: 'specialty', label: 'Направление' },
+        { key: 'typeOfLearning', label: 'Тип обучения' },
+        { key: 'scecialty', label: 'Направление' },
         { key: 'parentsName', label: 'ФИО родителя' },
         { key: 'phone', label: 'Телефон' },
         { key: 'email', label: 'Email' }
@@ -24,9 +27,13 @@ const AdminDashboard = () => {
             });
     }, []);
 
+    const addRecord = (newRecord) => {
+        setRecords([...records, newRecord]); // Добавить нового пользователя в таблицу
+    };
+
     return (
-        <div>
-            <Link to='/'><button>Add+</button></Link>
+        <div className='admin-page'>
+            <button onClick={() => setModalActive(true)}>Add+</button>
             <table>
                 <thead>
                     <tr>
@@ -44,12 +51,16 @@ const AdminDashboard = () => {
                                 {columns.map((col, j) => (
                                     <td key={j}>{record[col.key]}</td>
                                 ))}
-                                <td>Up</td>
+                                <td><button><RiUserSettingsLine /></button>
+                                <button><AiOutlineUserDelete /></button>
+                                </td>
+                                {/* <td><button><AiOutlineUserDelete /></button></td> */}
                             </tr>
                         ))
                     }
                 </tbody>
             </table>
+            <AddUser active={modalActive} setActive={setModalActive} addRecord={addRecord} />
         </div>
     );
 }

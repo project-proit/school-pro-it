@@ -3,12 +3,12 @@ import AdminAuth from './AdminAuth';
 import AdminDashboard from './AdminDashboard';
 
 const AdminMain = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
 
-    useEffect(() => {
-        const authToken = localStorage.getItem('authToken');
-        setIsAuthenticated(!!authToken);
-    }, []);
+    // useEffect(() => {
+    //     const authToken = localStorage.getItem('authToken');
+    //     setIsAuthenticated(!!authToken);
+    // }, []);
     
   return (
     <div>

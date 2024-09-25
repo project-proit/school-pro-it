@@ -16,10 +16,6 @@ const AdminNavBar = () => {
         <div className='menu'>
           <Link to='/'><HiArrowLongLeft className='arrow-back-menu'/></Link>
           <Link to='/'>Главная</Link>
-            {/* <a href='##'><HiArrowLongLeft className='arrow-back-menu'/></a>
-            <li>
-                <a href='##'>Главная</a>
-            </li> */}
         </div>
       </div>
     </div>

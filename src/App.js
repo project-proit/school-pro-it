@@ -9,6 +9,7 @@ import Specialties from './pages/Specialties'
 import { Routes, Route } from 'react-router-dom';
 import Notfoundpage from './pages/Notfoundpage';
 import LayoutAdmin from './components/LayoutAdmin';
+import AddUser from './pages/AdminPage/AddUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           </Route>
           <Route path='admin' element={<LayoutAdmin />}>
             <Route index element={<AdminMain />} />
+            <Route path='add' element={<AddUser />} />
             <Route path='*' element={<Notfoundpage />} />
           </Route>
         </Routes>
