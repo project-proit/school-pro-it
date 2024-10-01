@@ -1,11 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import AdminNavBar from '../pages/AdminPage/AdminNavBar/AdminNavBar';
+import AdminNavBar0 from '../../pages/AdminPage/AdminNavBar/AdminNavBar0';
+import AdminNavBar1 from '../../pages/AdminPage/AdminNavBar/AdminNavBar1';
 
-const LayoutAdmin = () => {
+const LayoutAdmin = ({ isAuthenticated }) => {
   return (
     <div>
-      <AdminNavBar />
 
       <Outlet />
 

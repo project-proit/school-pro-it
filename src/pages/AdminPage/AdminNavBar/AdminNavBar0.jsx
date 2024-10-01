@@ -5,7 +5,7 @@ import LogoAdmin2 from '../../../assets/LogoAdmin2.png';
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
-const AdminNavBar = () => {
+const AdminNavBar0 = () => {
   return (
     <div className='header'>
       <div className='header-content'>
@@ -22,4 +22,4 @@ const AdminNavBar = () => {
   )
 }
 
-export default AdminNavBar
+export default AdminNavBar0

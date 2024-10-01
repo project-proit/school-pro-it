@@ -24,35 +24,33 @@ const Navbar = () => {
     <header className={style.header}>
       <div className='container'>
         <div className={style.box}>
-
-            <div className={style.logo_image}>
-              <img className={style.logo_school} src={Logo} alt='LOGO' />
-              <img className={style.logo_office} src={LogoText} alt='Logo' />
-            </div>
-            <ul
-              className={
-                nav ? [style.menu, style.active].join(' ') : [style.menu]
-              }
-            >
-              <li>
-                <Link to='/'>Главная</Link>
-              </li>
-              <li>
-                <Link to='/specialties'>Направления</Link>
-              </li>
-              <li>
-                <Link to='/about'>О школе</Link>
-              </li>
-              <li>
-                <Link to='/contacts' className={style.header_contacts}>Контакты</Link>
-              </li>
-            </ul>
-            <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
-              {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
-            </div>
+          <div className={style.logo_image}>
+            <img className={style.logo_school} src={Logo} alt='LOGO' />
+            <img className={style.logo_office} src={LogoText} alt='Logo' />
           </div>
+          <ul
+            className={
+              nav ? [style.menu, style.active].join(' ') : [style.menu]
+            }
+          >
+            <li>
+              <Link to='/'>Главная</Link>
+            </li>
+            <li>
+              <Link to='/specialties'>Направления</Link>
+            </li>
+            <li>
+              <Link to='/about'>О школе</Link>
+            </li>
+            <li>
+              <Link to='/contacts' className={style.header_contacts}>Контакты</Link>
+            </li>
+          </ul>
+          <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
+            {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
           </div>
-
+        </div>
+      </div>
     </header>
   );
 };

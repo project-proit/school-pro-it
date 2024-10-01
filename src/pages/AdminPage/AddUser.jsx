@@ -39,102 +39,100 @@ const AddUser = ({ active, setActive, addRecord }) => {
     <div className='admin-page'>
       <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
         <div className="modal-content" onClick={e => e.stopPropagation()}>
-          <h2>Добавить пользователя</h2>
-          <form onSubmit={handleSubmit}>
-            <label>
-                Полное имя:
-                <input
-                    type="text"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                Направление:
-                <input
-                    type="text"
-                    name="specialty"
-                    value={formData.specialty}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                ФИО родителя:
-                <input
-                    type="text"
-                    name="parentsName"
-                    value={formData.parentsName}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                Возраст:
-                <input
-                    type="text"
-                    name="age"
-                    value={formData.age}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                ТИп обучения:
-                <input
-                    type="text"
-                    name="typeOfLearning"
-                    value={formData.typeOfLearning}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                Город:
-                <input
-                    type="text"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                Телефон:
-                <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                Email:
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            <label>
-                url:
-                <input
-                    type="url"
-                    name="url"
-                    value={formData.url}
-                    onChange={handleChange}
-                    required
-                />
-            </label>
-            
-            <button type="submit">Добавить</button>
+          <h2>Добавить заявку!</h2>
+          <form onSubmit={handleSubmit} className='form-add'>
+            <input
+                placeholder='ФИО'
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+            />
+            <select 
+                name="scecialty" 
+                id="scecialty" 
+                value={formData.scecialty}
+                onChange={handleChange}
+                required>
+                <option value="">Направление</option>
+                <option value="Таганрог">Искусственный интеллект</option>
+                <option value="Web-разработка">Web-разработка</option>
+                <option value="Мобильная разработка">Мобильная разработка</option>
+                <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>
+                <option value="Квантовые сети">Квантовые сети</option>
+                <option value="Интернет вещей (умный дом)">Интернет вещей (умный дом)</option>
+                <option value="3D-печать и прототипирование">3D-печать и прототипирование</option>
+                <option value="Робототехника">Робототехника</option>
+            </select>
+            <input
+                placeholder='ФИО родителя'
+                type="text"
+                name="parentsName"
+                value={formData.parentsName}
+                onChange={handleChange}
+                required
+            />
+            <input
+                placeholder='Возраст'
+                type="text"
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                required
+            />
+            <select 
+                name="typeOfLearning" 
+                id="typeOfLearning" 
+                value={formData.typeOfLearning}
+                onChange={handleChange}
+                required>
+                <option value="">Тип обучения</option>
+                <option value="Интенсивы">Интенсивы</option>
+                <option value="Полугодовая школа">Полугодовая школа</option>
+            </select>
+            <select 
+                name="city" 
+                id="city" 
+                value={formData.city}
+                onChange={handleChange}
+                required>
+                <option value="">Выберите город</option>
+                <option value="Таганрог">Таганрог</option>
+                <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                <option value="Ейеск">Ейеск</option>
+                <option value="Другой">Другой</option>
+            </select>
+            <input
+                type="tel"
+                name="phone"
+                placeholder='Телефон'
+                value={formData.phone}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder='Email'
+                value={formData.email}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type="url"
+                name="url"
+                placeholder='Ссылка на соцсети'
+                value={formData.url}
+                onChange={handleChange}
+                required
+            />
+            <div className='buttons-form-add'>
+                <button className='btn-submit'type="submit">Добавить</button>
+                <button className='btn-cancel' onClick={() => setActive(false)}>Закрыть</button>
+            </div>
+
           </form>
-          <button onClick={() => setActive(false)}>Закрыть</button>
         </div>
     </div>
     <h1>Hello</h1>
