@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  width: 580px;
+  height: 1px;
+  left: 200px;
+  top: 54px;
+  font-weight:60px;
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  z-index: 9;
+  font-size: 18px
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    margin-bottom: 110px;
+    
+  }
+  
+  .header p {
+    position: absolute;
+    font-size: 1.7em;
+    
+    color: #5c5c5c;
+    top: 200px;
+    width: 600px;
+    height: 1px;
+    left: 00px;
+  }
+  
+  

@@ -1,0 +1,34 @@
+.about-school {
+    background-color: #9999ff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 1px;
+    
+  }
+  
+  .about-school__title {
+    font-size: 800px;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  .about-school__text {
+    background-color: #ff06ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(168, 168, 168);
+    top:1000px;
+    
+  }
+  
+  .about-school__text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    
+  }

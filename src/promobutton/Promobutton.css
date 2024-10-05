@@ -1,0 +1,27 @@
+
+.btn-back {
+  color: #ffffff;
+  border-radius: 50px;
+  width: 300px;
+  height: 80px;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  top:-290px;
+  left: 200px;
+}
+
+.btn-back {
+  background-color: #81E7EE;
+  border: 3px solid #81E7EE;
+}
+
+
+
+.btn-back:hover {
+  background-color: #ffff;
+  border: 3px solid inherit;
+  color: #BDBCF8;
+  transform: scale(0.95);
+  transition: 0.8s all;
+}
