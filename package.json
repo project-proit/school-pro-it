@@ -2,7 +2,7 @@
   "name": "react-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://project-proit.github.io/school-pro-it",
+  "homepage": "https://school-pro-it.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

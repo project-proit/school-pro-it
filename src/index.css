@@ -21,5 +21,12 @@ a {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 px;
+  padding: 0px;
+}
+
+.content {
+  margin-top: 100px; /* 70px высота хедера + 15px отступ сверху */
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
 }

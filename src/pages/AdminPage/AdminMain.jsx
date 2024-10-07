@@ -1,29 +1,27 @@
+// AdminMain.js
 import React, { useEffect, useState } from 'react';
 import AdminAuth from './AdminAuth';
-import AdminDashboard from './AdminDashboard';
+import Applications from './Applications';
 
 const AdminMain = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Начальное состояние
 
-    // useEffect(() => {
-    //     const authToken = localStorage.getItem('authToken');
-    //     setIsAuthenticated(!!authToken);
-    // }, []);
-    
+  useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    setIsAuthenticated(!!authToken); // Проверка аутентификации при монтировании
+  }, []);
+
   return (
     <div>
-      {/* <AdminNavBar />
-      <AdminAuth /> */}
-      {/* <AdminNavBar /> */}
-        <div>
-            {isAuthenticated ? (
-                <AdminDashboard />
-            ) : (
-                <AdminAuth />
-            )}
-        </div>
+      <div>
+        {isAuthenticated ? (
+          <Applications setIsAuthenticated={setIsAuthenticated} /> // Передаем setIsAuthenticated, если это нужно
+        ) : (
+          <AdminAuth setIsAuthenticated={setIsAuthenticated} /> // Передаем setIsAuthenticated в AdminAuth
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
-export default AdminMain
+export default AdminMain;

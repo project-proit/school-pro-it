@@ -12,7 +12,7 @@ const Form = ({active, setActive, children}) => {
     fullName: "",
     age: "",
     city: "",
-    scecialty: "",
+    specialty: "",
     parentsName: "",
     phone: "",
     email: "",
@@ -41,7 +41,7 @@ const Form = ({active, setActive, children}) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/student', {
+      const response = await fetch('http://localhost:4200/api/v1/application/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

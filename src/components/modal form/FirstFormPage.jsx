@@ -38,10 +38,10 @@ const FirstFormPage = ({ formData, setFormData }) => {
               <option value="Другой">Другой</option>
           </select>
 
-          <select name="scecialty" id="scecialty" value={formData.scecialty}
+          <select name="specialty" id="specialty" value={formData.specialty}
           className='btn-type-of-learning'
           onChange={(event) =>
-            setFormData({ ...formData, scecialty: event.target.value })
+            setFormData({ ...formData, specialty: event.target.value })
           } required>
               <option value="">Направление</option>
               <option value="Таганрог">Искусственный интеллект</option>

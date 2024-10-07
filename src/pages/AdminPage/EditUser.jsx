@@ -10,9 +10,10 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
       id: "",
       typeOfLearning: "",
       fullName: "",
+      status: "",
       age: "",
       city: "",
-      scecialty: "",
+      specialty: "",
       parentsName: "",
       phone: "",
       email: "",
@@ -25,9 +26,10 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
         id: currentRecord.id || '',
         fullName: currentRecord.fullName || '',
         typeOfLearning: currentRecord.typeOfLearning || '',
-        scecialty: currentRecord.scecialty || '',
+        specialty: currentRecord.specialty || '',
         parentsName: currentRecord.parentsName || '',
         phone: currentRecord.phone || '',
+        status: currentRecord.status || '',
         email: currentRecord.email || '',
         age: currentRecord.age || '',
         city: currentRecord.city || '',
@@ -45,7 +47,7 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
   };
 
   const validateFormData = () => {
-    const mandatoryFields = ['fullName', 'typeOfLearning', 'scecialty', 'parentsName', 'phone', 'email', 'age', 'city', 'url'];
+    const mandatoryFields = ['fullName', 'typeOfLearning', 'specialty', 'parentsName', 'phone', 'email', 'age', 'city', 'url', 'status'];
     for (let field of mandatoryFields) {
       if (!formData[field]) {
         alert(`Пожалуйста, заполните поле ${field}`);
@@ -64,7 +66,7 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
     }
     console.log('Отправка данных:', formData);
     try {
-      const response = await axios.put(`http://localhost:4000/api/student/${formData.id}`, formData);
+      const response = await axios.put(`http://localhost:4200/api/v1/application/${formData.id}`, formData);
   
       if (response.status === 200) {
         const updatedRecord = response.data;
@@ -97,9 +99,21 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
             onChange={handleInputChange}
           />
           <select 
-            name="scecialty" 
-            id="scecialty" 
-            value={formData.scecialty}
+            name="status" 
+            id="status" 
+            value={formData.status}
+            onChange={handleInputChange}>
+            <option value="">Статус</option>
+            <option value="Новая">Новая</option>
+            <option value="На рассмотрении">На рассмотрении</option>
+            <option value="Принят">Принят</option>
+            <option value="Не принят">Не принят</option>
+            <option value="На рассмотрении">На рассмотрении</option>
+          </select>
+          <select 
+            name="specialty" 
+            id="specialty" 
+            value={formData.specialty}
             onChange={handleInputChange}>
             <option value="">Направление</option>
             <option value="Таганрог">Искусственный интеллект</option>

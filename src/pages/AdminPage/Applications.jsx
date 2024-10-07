@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { RiUserForbidLine, RiUserSettingsLine, RiUserAddLine } from "react-icons/ri";
+import { RiUserForbidLine, RiUserSettingsLine, RiUserAddLine, RiUserHeartLine } from "react-icons/ri";
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import AddUser from './AddUser';
 import axios from 'axios';
@@ -9,29 +9,72 @@ import EditUser from './EditUser';
 import AdminNavBar1 from './AdminNavBar/AdminNavBar1';
 import ColumnSelector from '../../components/Column-Selector/ColumnSelector';
 
-const AdminDashboard = () => {
+const Applications = ( {setIsAuthenticated} ) => {
     const [records, setRecords] = useState([]);
     const [modalActive, setModalActive] = useState(false);
     const [editModalActive, setEditModalActive] = useState(false);
     const [currentRecord, setCurrentRecord] = useState(null);
     const [showFilter, setShowFilter] = useState(false);
-    
+
     // Пагинация
     const [currentPage, setCurrentPage] = useState(1);
     const [recordsPerPage] = useState(10);
 
     const columns = [
-        { key: 'id', label: 'ID' },
         { key: 'fullName', label: 'Полное имя' },
         { key: 'typeOfLearning', label: 'Тип обучения' },
-        { key: 'age', label: 'Возраст' },
+        { key: 'specialty', label: 'Направление' },
         { key: 'city', label: 'Город' },
-        { key: 'scecialty', label: 'Направление' },
+        { key: 'status', label: 'Статус' },
+        { key: 'age', label: 'Возраст' },
         { key: 'parentsName', label: 'ФИО родителя' },
         { key: 'phone', label: 'Телефон' },
         { key: 'email', label: 'Email' },
-        { key: 'url', label: 'url' }
+        { key: 'url', label: 'url' },
     ];
+
+    // Перенос заявки в студенты
+    const addStudent = (studentData) => {
+        const confirmDelete = window.confirm("Вы действительно хотите добавить этого ученика?");
+        if (confirmDelete) {
+            return axios.post('http://localhost:4200/api/v1/student/create', studentData);
+        }
+        else {
+            return Promise.resolve();
+        }
+    };
+
+    const handleAcceptClick = (record) => {
+        if (record.status === 'Принят') return;
+        const studentData = {
+            fullName: record.fullName,
+            typeOfLearning: record.typeOfLearning,
+            specialty: record.specialty,
+            city: record.city,
+            age: record.age,
+            parentsName: record.parentsName,
+            phone: record.phone,
+            email: record.email,
+            url: record.url,
+        };
+    
+        // Добавляем студента в таблицу "Students"
+        addStudent(studentData)
+            .then(() => {
+                axios.put(`http://localhost:4200/api/v1/application/update/${record.id}`, { status: 'Принят' })
+                    .then(() => {
+                        setRecords(records.map(r => 
+                            r.id === record.id ? { ...r, status: 'Принят' } : r
+                        ));
+                    })
+                    .catch(err => {
+                        console.error("Ошибка при обновлении статуса заявки:", err);
+                    });
+            })
+            .catch(err => {
+                console.error("Ошибка при добавлении студента:", err);
+        });
+    };
 
     // фильтры, сортировка, выбор столбцов
     const [visibleColumns, setVisibleColumns] = useState(columns.map(col => col.key));
@@ -39,7 +82,7 @@ const AdminDashboard = () => {
     const [filterTypeOfLearning, setFilterTypeOfLearning] = useState('Все');
 
     useEffect(() => {
-        axios.get('http://localhost:4000/api/student')
+        axios.get('http://localhost:4200/api/v1/application/get')
             .then(res => setRecords(res.data));
     }, []);
 
@@ -61,13 +104,13 @@ const AdminDashboard = () => {
     const deleteRecord = (id) => {
         const confirmDelete = window.confirm("Вы действительно хотите удалить данную анкету?");
         if (confirmDelete) {
-            axios.delete(`http://localhost:4000/api/student/${id}`)
-                .then(() => {
-                    setRecords(records.filter(record => record.id !== id));
-                })
-                .catch(err => {
-                    console.error("Ошибка при удалении записи:", err);
-                });
+            axios.delete(`http://localhost:4200/api/v1/application/delete/${id}`)
+            .then(() => {
+                setRecords(records.filter(record => record.id !== id));
+            })
+            .catch(err => {
+                console.error("Ошибка при удалении записи:", err);
+            });
         }
     };
 
@@ -120,6 +163,7 @@ const AdminDashboard = () => {
         <div>
             <AdminNavBar1 />
             <div className='admin-page'>
+                <div><h1>Заявки</h1></div>
                 <div className='total-applications'>
                     <h4>Количество заявок всего: {records.length}</h4>
                     <h4>Количество заявок в полугодовую школу: {halfYearSchoolCount}</h4>
@@ -135,41 +179,40 @@ const AdminDashboard = () => {
                     <table>
                         <thead>
                             <tr>
-                            <th>Act</th>
-                                {columns.map((col, i) => (
-                                    visibleColumns.includes(col.key) && (
-                                        <th key={i} onClick={() => handleSort(col.key)}>
-                                            {col.key === 'typeOfLearning' ? (
-                                                <th key={i}>
-                                                Тип обучения
-                                                <div 
-                                                className='filter-container'
-                                                onMouseEnter={() => setShowFilter(true)} 
-                                                onMouseLeave={() => setShowFilter(false)}
-                                                >
-                                                <FiFilter className="filter-icon" />
-                                                <select 
-                                                    className='type-of-lean-select'
-                                                    value={filterTypeOfLearning}
-                                                    onChange={handleFilterChange}
-                                                    style={{ display: showFilter ? 'block' : 'none' }}
-                                                >
-                                                    <option value="Все">Все</option>
-                                                    <option value="Полугодовая школа">Полугодовая школа</option>
-                                                    <option value="Интенсивы">Интенсивы</option>
-                                                </select>
-                                                </div>
+                                <th>Act</th>
+                                    {columns.map((col, i) => (
+                                        visibleColumns.includes(col.key) && (
+                                            <th key={i} onClick={() => handleSort(col.key)}>
+                                                {col.key === 'typeOfLearning' ? (
+                                                    <th key={i}>
+                                                    Тип обучения
+                                                    <div 
+                                                    className='filter-container'
+                                                    onMouseEnter={() => setShowFilter(true)} 
+                                                    onMouseLeave={() => setShowFilter(false)}
+                                                    >
+                                                        <FiFilter className="filter-icon" />
+                                                        <select 
+                                                            className='type-of-lean-select'
+                                                            value={filterTypeOfLearning}
+                                                            onChange={handleFilterChange}
+                                                            style={{ display: showFilter ? 'block' : 'none' }}
+                                                        >
+                                                            <option value="Все">Все</option>
+                                                            <option value="Полугодовая школа">Полугодовая школа</option>
+                                                            <option value="Интенсивы">Интенсивы</option>
+                                                        </select>
+                                                    </div>
+                                                </th>
+                                                
+                                                ) : (
+                                                    <>
+                                                        {col.label} {sortConfig.key === col.key && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                                    </>
+                                                )}
                                             </th>
-                                            
-                                            ) : (
-                                                <>
-                                                    {col.label} {sortConfig.key === col.key && (sortConfig.direction === 'asc' ? '↑' : '↓')}
-                                                </>
-                                            )}
-                                        </th>
-                                    )
-                                ))}
-                                <th>Статус</th>
+                                        )
+                                    ))}
                             </tr>
                         </thead>
                         <tbody>
@@ -178,6 +221,7 @@ const AdminDashboard = () => {
                                     <td className='actions-btns'>
                                         <button className='icon-edit' onClick={() => handleEditClick(record)}><RiUserSettingsLine /></button>
                                         <button className='icon-del' onClick={() => deleteRecord(record.id)}><RiUserForbidLine /></button>
+                                        <button className='icon-accept' onClick={() => handleAcceptClick(record)} disabled={record.status === 'Принят'}><RiUserHeartLine /></button>
                                     </td>
                                     {columns.map((col, j) => (
                                         visibleColumns.includes(col.key) && <td key={j}>{record[col.key]}</td>
@@ -186,25 +230,25 @@ const AdminDashboard = () => {
                             ))}
                         </tbody>
                     </table>
-                    </div>
                 </div>
+            </div>
 
-                {/* Кнопки пагинации */}
-                <div className='pagination'>
-                    <HiOutlineArrowLongLeft className='arrows-for-pagination' onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} disabled={currentPage === 1}/>
-                    <span>Страница {currentPage} из {totalPages}</span>
-                    <HiOutlineArrowLongRight className='arrows-for-pagination' onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}/>
-                </div>
+            {/* Кнопки пагинации */}
+            <div className='pagination'>
+                <HiOutlineArrowLongLeft className='arrows-for-pagination' onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} disabled={currentPage === 1}/>
+                <span>Страница {currentPage} из {totalPages}</span>
+                <HiOutlineArrowLongRight className='arrows-for-pagination' onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}/>
+            </div>
 
-                <AddUser active={modalActive} setActive={setModalActive} addRecord={addRecord} />
-                <EditUser
-                    active={editModalActive}
-                    setActive={setEditModalActive}
-                    currentRecord={currentRecord}
-                    updateRecord={updateRecord}
-                />
+            <AddUser active={modalActive} setActive={setModalActive} addRecord={addRecord} />
+            <EditUser
+                active={editModalActive}
+                setActive={setEditModalActive}
+                currentRecord={currentRecord}
+                updateRecord={updateRecord}
+            />
         </div>
     );
 }
 
-export default AdminDashboard;
+export default Applications;

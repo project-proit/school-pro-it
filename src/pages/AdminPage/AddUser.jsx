@@ -8,7 +8,8 @@ const AddUser = ({ active, setActive, addRecord }) => {
     fullName: "",
     age: "",
     city: "",
-    scecialty: "",
+    status: "",
+    specialty: "",
     parentsName: "",
     phone: "",
     email: "",
@@ -25,7 +26,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
   const handleSubmit = (e) => {
       e.preventDefault();
       // Отправка данных на сервер
-      axios.post('http://localhost:4000/api/student', formData)
+      axios.post('http://localhost:4200/api/v1/application/create', formData)
       .then((response) => {
           addRecord(response.data); // Добавление записи в таблицу
           setActive(false); // Закрыть модальное окно после успешного добавления
@@ -50,9 +51,21 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 required
             />
             <select 
-                name="scecialty" 
-                id="scecialty" 
-                value={formData.scecialty}
+                name="status" 
+                id="status" 
+                value={formData.status}
+                onChange={handleChange}>
+                <option value="">Статус</option>
+                <option value="Новая">Новая</option>
+                <option value="На рассмотрении">На рассмотрении</option>
+                <option value="Принят">Принят</option>
+                <option value="Не принят">Не принят</option>
+                <option value="На рассмотрении">На рассмотрении</option>
+            </select>
+            <select 
+                name="specialty" 
+                id="specialty" 
+                value={formData.specialty}
                 onChange={handleChange}
                 required>
                 <option value="">Направление</option>
@@ -131,11 +144,9 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 <button className='btn-submit'type="submit">Добавить</button>
                 <button className='btn-cancel' onClick={() => setActive(false)}>Закрыть</button>
             </div>
-
           </form>
         </div>
     </div>
-    <h1>Hello</h1>
   </div>
   )
 }
