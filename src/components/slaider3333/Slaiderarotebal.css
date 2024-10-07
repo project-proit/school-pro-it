@@ -1,0 +1,62 @@
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0ffff;
+  }
+  
+  .slider-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .review-card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e6e6fa;
+  }
+  
+  .review-author {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .prev-button,
+  .next-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    margin-right: 10px;
+    position: relative;
+    left: -430px;
+    top: -150px;
+  }
+  
+  .next-button {
+    margin-left: 10px;
+    position: relative;
+    left: 430px;
+    top: -185px;
+  }
+  

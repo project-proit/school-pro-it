@@ -42,9 +42,12 @@
     transform: rotateY(180deg);
     background-color: #f300f3;
     color: #001cbb;
-    padding: 20px;
-    position: relative;
-    top: -380px;
+    padding: 3%;
+    position: fixed;
+    top: 1px;
+    width: 60%;
+    height: 75%;
+    left: 60px;
     
   }
   

@@ -7,14 +7,14 @@
   font-weight:60px;
   flex: none;
   order: 5;
-  flex-grow: 0;
+  
   z-index: 9;
   font-size: 18px
   }
   
   .header h1 {
     font-size: 3em;
-    margin-bottom: 110px;
+    
     
   }
   
