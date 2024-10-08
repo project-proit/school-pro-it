@@ -1,0 +1,38 @@
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h2 {
+        font-size:2vw;
+        font-weight: 600;
+    }
+}
+  
+.circle {
+    width: 17vw;
+    height: 17vw;
+    border-radius: 50%;
+    background-color: #BB71F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 8vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    .circle {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .circle-container {
+        h2 {
+            font-size: 3vw;
+        }
+    }
+}
