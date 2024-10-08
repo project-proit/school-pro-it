@@ -29,6 +29,7 @@ const VideoWindow = () => {
       title="Youtube Player"
       frameborder="0"
       allowFullScreen
+      style={{ borderRadius: '30px' }} // Добавлен стиль borderRadius
     />
        
     </div>
