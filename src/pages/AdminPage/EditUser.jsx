@@ -1,4 +1,4 @@
-import axios from 'axios';
+import customAxios from "../../axios"
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import './Admin.css';
@@ -66,7 +66,7 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
     }
     console.log('Отправка данных:', formData);
     try {
-      const response = await axios.put(`http://localhost:4200/api/v1/application/${formData.id}`, formData);
+      const response = await customAxios.put(`application/${formData.id}`, formData);
   
       if (response.status === 200) {
         const updatedRecord = response.data;

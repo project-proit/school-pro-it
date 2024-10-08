@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import customAxios from "../../axios"
 import './Admin.css';
 
 const AddStudent = ({ active, setActive, addRecord }) => {
@@ -26,7 +26,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
       const handleSubmit = (e) => {
           e.preventDefault();
           // Отправка данных на сервер
-          axios.post('http://localhost:4200/api/v1/student/create', formData)
+          customAxios.post('student/create', formData)
           .then((response) => {
               addRecord(response.data); // Добавление записи в таблицу
               setActive(false); // Закрыть модальное окно после успешного добавления
