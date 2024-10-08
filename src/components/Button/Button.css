@@ -3,9 +3,9 @@
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
-    max-width: 357px;
+    /* max-width: 357px;
     max-height: 100px;
-    min-height: 100px;
+    min-height: 90px; */
 }
 
 /* Размеры кнопок */
@@ -16,9 +16,9 @@
 
 .button.medium {
     width: 20vw;
-    height: 10vh;
-    padding: 2vh 4vw;
-    font-size: 30px;
+    height: 5vw;
+    padding: 1vw 4vw;
+    font-size: 1.6vw;
 }
 
 .button.large {

@@ -2,45 +2,42 @@
     text-align: right;
 }
 
-.container {
+.container-promo {
+    padding: 0 0 0 120px;
     max-width: 100%;
     padding-left: 30px;
 }
 
 .promo-img img {
-    max-width: 1195px;
-    position: relative; 
     margin-right: 0;
 }
 
 .img-back {
-    width: auto;
+    width: 60vw;
     height: auto;
 }
 
 .promo-text-and-btns {
-    position: absolute;  /* Абсолютное позиционирование текста */
-    top: 50%;            /* Сдвигаем текст вниз на 50% от высоты контейнера */
-    left: 50%;   
-    color: #3D3F68; 
-    display: block;
-    transform: translate(-112%, -94%);
+    position: absolute;
+    top: 180px;
+    left: 8vw;
+    color: #3D3F68;
 }
 
 .promo-text-and-btns h1 {
-    font-size: 70px;
+    font-size: 3.5vw;
     font-weight: 400;
 }
 
 .promo-text-and-btns p {
-    font-size: 30px;
+    font-size: 1.6vw;
 }
 
 .promo-text-and-btns .btns {
-    padding-top: 110px;
+    padding-top: 6vw;
     position: absolute;
     display: flex;
-    gap: 60px;
+    gap: 2vw;
 }
 
 .promo-text {
@@ -49,6 +46,7 @@
 }
 
 .video-btn-and-text {
+    width: 15vw;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -56,7 +54,7 @@
 
 .video-btn-and-text p {
     color: #6B6EA5;
-    font-size: 18px;
+    font-size: 0.8vw;
 }
 
 .btn-triangle {
@@ -80,11 +78,11 @@
 
 .btn-video {
     padding-left: 5px;
-    width: 100px;
-    height: 100px;
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
-    font-size: 50px;
-    background-color: #ffffff; 
+    font-size: 2.5vw;
+    background-color: inherit; 
     display: flex;
     border: 2px solid #6B6EA5;
     justify-content: center;
@@ -98,7 +96,54 @@
 }
 
 /* Медиа-запросы для адаптивности */
-@media (max-width: 1200px) {
+/* @media (max-width: 1500px) {
+    .img-back {
+        top: 10px;
+        max-width: 700px;
+    }
+    .promo-text-and-btns h1 {
+        font-size: 40px;
+    }
+
+    .promo-text-and-btns {
+        position: absolute;
+        top: 50%;
+        left: 10%;   
+        display: block;
+        transform: translate(-10%, -62%);
+    }
+
+    .promo-img img {
+        max-width: 700px;
+        position: relative; 
+        margin-right: 0;
+    }
+
+    .promo-text-and-btns p {
+        font-size: 16px;
+    }
+
+    .promo-text-and-btns .btns {
+        gap: 10px;
+        padding-top: 50px;
+    }
+
+    .btn-video {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .video-btn-and-text {
+        gap: 10px;
+    }
+    
+    .video-btn-and-text p {
+        font-size: 10px;
+    }
+    
+} */
+/* @media (max-width: 1200px) {
     .img-back {
         top: 10px;
         width: 90vw;
@@ -109,8 +154,8 @@
     }
 
     .promo-text-and-btns {
-        position: absolute;  /* Абсолютное позиционирование текста */
-        top: 50%;            /* Сдвигаем текст вниз на 50% от высоты контейнера */
+        position: absolute;
+        top: 50%;
         left: 50%;   
         color: #3D3F68; 
         display: block;
@@ -199,4 +244,4 @@
         align-items: center;
         gap: 0px;
     }
-}
+} */
