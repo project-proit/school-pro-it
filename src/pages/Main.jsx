@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../index.css'
 import Promo from '../components/MainComponents/Promo/Promo';
 import AboutSchool from '../components/MainComponents/AboutSchool/AboutSchool';
+import SocialMediaQR from '../components/MainComponents/SocialMediaQR/SocialMediaQR';
+import Table from '../components/MainComponents/TableProsCons/Table';
 
 const Main = () => {
   return (
@@ -13,6 +15,8 @@ const Main = () => {
       <div className='main-content'>
         <Promo />
         <AboutSchool />
+        <SocialMediaQR />
+        <Table />
       </div>
     </div>
   )

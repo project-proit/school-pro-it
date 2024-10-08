@@ -11,8 +11,10 @@
 
 /* Размеры кнопок */
 .button.small {
-    padding: 8px 12px;
-    font-size: 12px;
+    width: 20vw;
+    height: 5vw;
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
 }
 
 .button.medium {
@@ -44,7 +46,7 @@
 }
 
 .button.secondary {
-    background-color: #6c757d; /* Серый */
+    background-color: #A259FF; /* Серый */
     color: white;
 }
 
@@ -72,6 +74,16 @@
     .button.medium {
         width: 60vw;
         height: 12vw;
+        font-size: 3vw;
+    }
+    .button {
+        border-radius: 80px;
+    }
+}
+@media (max-width: 450px) {
+    .button.small {
+        width: 26vw;
+        height: 7vw;
         font-size: 3vw;
     }
     .button {
