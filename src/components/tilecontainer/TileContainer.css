@@ -34,13 +34,15 @@
     transition: transform 0.8s;
   }
   
+  
   .tile .front {
     transform: rotateY(0deg);
+    
   }
   
   .tile .back {
     transform: rotateY(180deg);
-    background-color: #f300f3;
+    background-color: #F8F7FB;
     color: #001cbb;
     padding: 3%;
     position: fixed;
@@ -48,6 +50,10 @@
     width: 60%;
     height: 75%;
     left: 60px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: solid #651366;
+    
     
   }
   

@@ -6,7 +6,7 @@ import Promobutton from './promobutton/Promobutton.jsx';
 import AboutSchool  from './components/aboutschool/AboutSchool';
 
 import SocialCard  from './components/socialcard/SocialCard.jsx';
-import StatsLogo  from './components/statslogo/StatsLogo.jsx';
+
 
 
 import { Homepage } from './components/homepage/Homepage.jsx';
@@ -36,9 +36,8 @@ const App = () => {
       
       <VideoWindow/>
       <TileContainer/>
-      
-      <ReviewSlider/>
       <ImageSlider/>
+      <ReviewSlider/>
     </div>
     
   );

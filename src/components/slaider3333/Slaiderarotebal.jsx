@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Slaiderarotebal.css'
+import { IoMdArrowDropleft } from "react-icons/io";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const ReviewsSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,22 +43,31 @@ const ReviewsSlider = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container1">
+      <div>
       <h2 className="slider-title">Отзывы о школе PRO IT</h2>
+      </div>
+      <div className="slider-arrowcont">
+        <div>
+          <IoMdArrowDropleft className="prev-button" onClick={handlePrevSlide}/>
+        </div>
       <div className="slider">
+        
         {reviews.slice(currentSlide, currentSlide + 3).map((review, index) => (
           <div key={index} className="review-card">
             <h3 className="review-author">{review[0]}</h3>
             <p className="review-text">{review[1]}</p>
+            
           </div>
+          
         ))}
       </div>
-      <button className="prev-button" onClick={handlePrevSlide}>
-        {'<'}
-      </button>
-      <button className="next-button" onClick={handleNextSlide}>
-        {'>'}
-      </button>
+      <div>
+        <IoMdArrowDropright className="next-button" onClick={handleNextSlide}/>
+        </div>
+        </div>
+      
+      
     </div>
   );
 };

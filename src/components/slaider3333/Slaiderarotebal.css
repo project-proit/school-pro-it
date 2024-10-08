@@ -1,62 +1,77 @@
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #e0ffff;
-  }
+.slider-container1 {
+  display: block;
   
-  .slider-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #A6E9FF;
+  height: 491px;
+  width: 1919px;
+}
+
+.slider-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 52px;
+  color: #6064B9;
+}
+.slider-arrowcont{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  display: flex;
+  gap: 99px;
+}
+
+.review-card {
+  width: 411px;
+  height: 261px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #BB71F6;
+}
+
+.review-author {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:#ffffff
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color:#ffffff
+}
+
+.prev-button,
+.next-button {
+  padding: 1px ;
+  border: none;
+  border-radius: 100px;
+  background-color: #A6E9FF;
   
-  .slider {
-    display: flex;
-    gap: 20px;
-  }
+  font-size: 100px;
+  cursor: pointer;
+  position: relative;
+  height: 100px;
+  width: 100px;
   
-  .review-card {
-    width: 250px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #e6e6fa;
-  }
+}
+
+.prev-button {
+ 
   
-  .review-author {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+}
+
+.next-button {
+  font-size: 1000px;
   
-  .review-text {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  .prev-button,
-  .next-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #008080;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .prev-button {
-    margin-right: 10px;
-    position: relative;
-    left: -430px;
-    top: -150px;
-  }
-  
-  .next-button {
-    margin-left: 10px;
-    position: relative;
-    left: 430px;
-    top: -185px;
-  }
+  color: rgb(255, 255, 255);
+}
+
   
