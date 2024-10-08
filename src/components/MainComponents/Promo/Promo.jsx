@@ -29,10 +29,7 @@ const Promo = () => {
   return (
     <div className='container-promo'>
         <div className='content'>
-            <div className='promo-img'>
-                <img className='img-back' src={photoback} alt='photoback'/>
-            </div>
-            <div className='promo-text-and-btns'>
+        <div className='promo-text-and-btns'>
                 <div className='promo-text'>
                     <h1>Погрузимся в мир <br/>информационных <br/>технологий вместе!</h1>
                     <p>Возрастная категория 12+</p>
@@ -49,6 +46,9 @@ const Promo = () => {
                     </Link>
                 </div>
                 {/* <Form active={modalActive} setActive={setModalActive} /> */}
+            </div>
+            <div className='promo-img'>
+                <img className='img-back' src={photoback} alt='photoback'/>
             </div>
         </div>
     </div>

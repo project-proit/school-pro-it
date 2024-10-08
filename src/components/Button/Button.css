@@ -6,6 +6,7 @@
     /* max-width: 357px;
     max-height: 100px;
     min-height: 90px; */
+
 }
 
 /* Размеры кнопок */
@@ -17,7 +18,7 @@
 .button.medium {
     width: 20vw;
     height: 5vw;
-    padding: 1vw 4vw;
+    padding: 1vw 3vw;
     font-size: 1.6vw;
 }
 
@@ -60,17 +61,20 @@
 .button:hover {
     opacity: 0.9; /* Эффект при наведении */
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 750px) {
     .button.medium {
         min-width: 100px;
         min-height: 10px;
         font-size: 18px;
     }
-}
-@media (max-width: 480px) {
+} */
+@media (max-width: 450px) {
     .button.medium {
-        min-width: 250px;
-        min-height: 10px;
-        font-size: 18px;
+        width: 60vw;
+        height: 12vw;
+        font-size: 3vw;
+    }
+    .button {
+        border-radius: 80px;
     }
 }
