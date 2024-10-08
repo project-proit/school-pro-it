@@ -1,0 +1,206 @@
+.promo-img {
+    text-align: right;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 30px;
+}
+
+.content {
+    display: ;
+}
+
+.promo-img img {
+    max-width: 1195px;
+    position: relative; 
+    margin-right: 0;
+}
+
+.img-back {
+    width: auto;
+    height: auto;
+}
+
+.promo-text-and-btns {
+    position: absolute;  /* Абсолютное позиционирование текста */
+    top: 50%;            /* Сдвигаем текст вниз на 50% от высоты контейнера */
+    left: 50%;   
+    color: #3D3F68; 
+    display: block;
+    transform: translate(-112%, -94%);
+}
+
+.promo-text-and-btns h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.promo-text-and-btns p {
+    font-size: 30px;
+}
+
+.promo-text-and-btns .btns {
+    padding-top: 110px;
+    position: absolute;
+    display: flex;
+    gap: 60px;
+}
+
+.promo-text {
+    display: grid;
+    gap: 20px;
+}
+
+.video-btn-and-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.video-btn-and-text p {
+    color: #6B6EA5;
+    font-size: 18px;
+}
+
+.btn-triangle {
+    transform: rotate(90deg);
+    color: #6B6EA5;
+}
+
+.btn-vid {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6B6EA5;
+}
+
+.btn-video:hover {
+    position: static;
+    border: 2px solid #3D3F68;
+    transform: scale(0.95);
+    transition: 0.8s all;
+}
+
+.btn-video {
+    padding-left: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    background-color: #ffffff; 
+    display: flex;
+    border: 2px solid #6B6EA5;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+.video-btn-and-text:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+    .img-back {
+        top: 10px;
+        width: 90vw;
+        max-width: 700px;
+    }
+    .promo-text-and-btns h1 {
+        font-size: 40px;
+    }
+
+    .promo-text-and-btns {
+        position: absolute;  /* Абсолютное позиционирование текста */
+        top: 50%;            /* Сдвигаем текст вниз на 50% от высоты контейнера */
+        left: 50%;   
+        color: #3D3F68; 
+        display: block;
+        transform: translate(-113%, -62%);
+    }
+
+    .promo-img img {
+        max-width: 700px;
+        position: relative; 
+        margin-right: 0;
+    }
+
+    .promo-text-and-btns p {
+        font-size: 18px;
+    }
+
+    .promo-text-and-btns .btns {
+        gap: 10px;
+        padding-top: 50px;
+    }
+
+    .btn-video {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .video-btn-and-text {
+        gap: 10px;
+    }
+    
+    .video-btn-and-text p {
+        font-size: 11px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 480px) {
+    .img-back {
+        top: 200px;
+        width: 100vw;
+        height: auto;
+    }
+    .promo-img {
+        text-align: center;
+    }
+
+    .promo-text-and-btns h1 {
+        font-size: 30px;
+    }
+
+    .promo-text-and-btns {
+        text-align: center;
+        transform: translate(-50%, -45%);
+    }
+
+    .promo-text-and-btns p {
+        font-size: 12px;
+    }
+
+    .promo-text {
+        display: grid;
+        gap: 260px;
+    }
+
+    .btn-video {
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+    }
+    .promo-text-and-btns .btns {
+        padding-top: 15px;
+        position: absolute;
+        display: grid;
+        gap: 10px;
+        margin: 0 20px;
+    }
+
+    .video-btn-and-text {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+    }
+}

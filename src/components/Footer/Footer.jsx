@@ -62,7 +62,6 @@ function Footer() {
                         </iframe>
                     </div>
                     <div>
-                        <img className='sfedu' src={LogoSfedu} alt='LogoSfedu'/>
                     </div>
                 </div>
             </div>

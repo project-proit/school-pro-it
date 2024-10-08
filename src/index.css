@@ -25,8 +25,7 @@ a {
 }
 
 .content {
-  margin-top: 100px; /* 70px высота хедера + 15px отступ сверху */
-  padding: 20px;
+  margin-top: 120px; /* 70px высота хедера + 15px отступ сверху */
   background-color: #f9f9f9;
   min-height: 100vh;
 }

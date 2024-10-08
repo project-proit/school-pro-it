@@ -1,0 +1,76 @@
+.button {
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 357px;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+/* Размеры кнопок */
+.button.small {
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.button.medium {
+    width: 20vw;
+    height: 10vh;
+    padding: 2vh 4vw;
+    font-size: 30px;
+}
+
+.button.large {
+    padding: 16px 20px;
+    font-size: 20px;
+}
+
+/* Цвета кнопок */
+.button.primary {
+    background-color: #81E7EE; /* Синий */
+    color: #015073;
+    font-weight: 600;
+    border: 3px solid #81E7EE;
+}
+
+.button.primary:hover {
+    border: 3px solid #81E7EE;
+    background-color: #ffffff;
+    cursor: pointer;
+    transform: scale(0.95);
+    transition: 0.8s all;
+}
+
+.button.secondary {
+    background-color: #6c757d; /* Серый */
+    color: white;
+}
+
+.button.success {
+    background-color: #28a745; /* Зеленый */
+    color: white;
+}
+
+.button.danger {
+    background-color: #dc3545; /* Красный */
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.9; /* Эффект при наведении */
+}
+@media (max-width: 1200px) {
+    .button.medium {
+        min-width: 100px;
+        min-height: 10px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .button.medium {
+        min-width: 250px;
+        min-height: 10px;
+        font-size: 18px;
+    }
+}
