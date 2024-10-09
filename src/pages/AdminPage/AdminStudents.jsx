@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { RiUserForbidLine, RiUserSettingsLine, RiUserAddLine } from "react-icons/ri";
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import AddStudent from './AddStudent';
-import customAxios from '../../axios';
+import axios from 'axios';
 import { FiFilter } from "react-icons/fi";
 import './Admin.css';
 import EditStudent from './EditStudent';
 import AdminNavBar1 from './AdminNavBar/AdminNavBar1';
 import ColumnSelector from '../../components/Column-Selector/ColumnSelector';
-
 
 const AdminStudents = () => {
   const [records, setRecords] = useState([]);
@@ -37,9 +36,9 @@ const AdminStudents = () => {
   const [filterTypeOfLearning, setFilterTypeOfLearning] = useState('Все');
 
   useEffect(() => {
-      customAxios.get(`student/get`)
+      axios.get('http://localhost:4200/api/v1/student/get')
           .then(res => setRecords(res.data));
-  }, [])
+  }, []);
 
   const addRecord = (newRecord) => {
       setRecords([...records, newRecord]);
@@ -59,7 +58,7 @@ const AdminStudents = () => {
   const deleteRecord = (id) => {
       const confirmDelete = window.confirm("Вы действительно хотите удалить данную анкету?");
       if (confirmDelete) {
-          customAxios.delete(`student/delete/${id}`)
+          axios.delete(`http://localhost:4200/api/v1/student/delete/${id}`)
               .then(() => {
                   setRecords(records.filter(record => record.id !== id));
               })

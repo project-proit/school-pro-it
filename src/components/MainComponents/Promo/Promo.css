@@ -19,7 +19,7 @@
 
 .promo-text-and-btns {
     position: absolute;
-    top: 190px;
+    top: 170px;
     left: 8vw;
     color: #3D3F68;
 }
@@ -34,7 +34,7 @@
 }
 
 .promo-text-and-btns .btns {
-    padding-top: 7vw;
+    padding-top: 5.5vw;
     position: absolute;
     display: flex;
     gap: 2vw;
@@ -96,7 +96,7 @@
 }
 
 /* Медиа-запросы для адаптивности */
-@media (max-width: 1552px) {
+/* @media (min-width: 1552px) {
     .promo-text-and-btns {
         top: 165px;
         left: 8vw;
@@ -105,7 +105,7 @@
     .promo-text-and-btns .btns {
         padding-top: 5vw;
     }
-}
+} */
 
 @media (max-width: 1100px) {
     .promo-text-and-btns {
@@ -158,11 +158,13 @@
 
     .container-promo {
         padding: 0;
+        display: grid;
+        align-items: center;
+        text-align: center;
         max-width: 100%;
-        padding-left: 0;
+        height: 160vw;
     }
     .promo-img {
-        margin-top: 280px;
         text-align: center;
     }
 
@@ -170,8 +172,18 @@
         font-size: 8vw;
     }
 
+    .promo-text {
+        display: grid;
+        gap: 10px;
+        padding-bottom: 240vw;
+    }
+
     .promo-text-and-btns {
-        transform: translate(4%, 0%);
+        display: grid;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        top: 150px;
     }
 
     .promo-text-and-btns p {
@@ -179,30 +191,33 @@
         font-size: 3vw;
     }
 
-    .promo-text {
-        display: grid;
-        gap: 90vw;
+    .promo-text h1 {
+        padding-bottom: 0;
     }
 
     .btn-video {
-        width: 17vw;
-        height: 17vw;
-        font-size: 9vw;
+        width: 13vw;
+        height: 13vw;
+        font-size: 7vw;
     }
 
     .video-btn-and-text {
-        width: 75vw;
+        width: 5vw;
         display: flex;
         align-items: center;
         gap: 0px;
     }
 
     .promo-text-and-btns .btns {
-        position: absolute;
-        display: grid;
+        display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        z-index: 1000;
+
+        p {
+            font-size: 0px;
+        }
     }
     
 }

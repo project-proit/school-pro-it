@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { RiUserForbidLine, RiUserSettingsLine, RiUserAddLine, RiUserHeartLine } from "react-icons/ri";
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import AddUser from './AddUser';
-import customAxios from "../../axios"
+import axios from 'axios';
 import { FiFilter } from "react-icons/fi";
 import './Admin.css';
 import EditUser from './EditUser';
@@ -37,7 +37,7 @@ const Applications = ( {setIsAuthenticated} ) => {
     const addStudent = (studentData) => {
         const confirmDelete = window.confirm("Вы действительно хотите добавить этого ученика?");
         if (confirmDelete) {
-            return customAxios.post('student/create', studentData);
+            return axios.post('http://localhost:4200/api/v1/student/create', studentData);
         }
         else {
             return Promise.resolve();
@@ -61,7 +61,7 @@ const Applications = ( {setIsAuthenticated} ) => {
         // Добавляем студента в таблицу "Students"
         addStudent(studentData)
             .then(() => {
-                customAxios.put(`application/update/${record.id}`, { status: 'Принят' })
+                axios.put(`http://localhost:4200/api/v1/application/update/${record.id}`, { status: 'Принят' })
                     .then(() => {
                         setRecords(records.map(r => 
                             r.id === record.id ? { ...r, status: 'Принят' } : r
@@ -82,7 +82,7 @@ const Applications = ( {setIsAuthenticated} ) => {
     const [filterTypeOfLearning, setFilterTypeOfLearning] = useState('Все');
 
     useEffect(() => {
-        customAxios.get('application/get')
+        axios.get('http://localhost:4200/api/v1/application/get')
             .then(res => setRecords(res.data));
     }, []);
 
@@ -104,7 +104,7 @@ const Applications = ( {setIsAuthenticated} ) => {
     const deleteRecord = (id) => {
         const confirmDelete = window.confirm("Вы действительно хотите удалить данную анкету?");
         if (confirmDelete) {
-            customAxios.delete(`application/delete/${id}`)
+            axios.delete(`http://localhost:4200/api/v1/application/delete/${id}`)
             .then(() => {
                 setRecords(records.filter(record => record.id !== id));
             })

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AdminNavBar1 from './AdminNavBar/AdminNavBar1';
-import customAxios from "../../axios"
+import axios from 'axios';
 
 const Administrators = () => {
   const [admins, setAdmins] = useState([]); // Инициализируем пустым массивом
@@ -10,7 +10,7 @@ const Administrators = () => {
     // Функция для получения списка администраторов
     const fetchAdmins = async () => {
       try {
-        const res = await customAxios.get('user/get');
+        const res = await axios.get('http://localhost:4200/api/v1/user/get');
 
         // Логируем статус ответа и данные
         console.log('Статус ответа:', res.status);
@@ -33,13 +33,13 @@ const Administrators = () => {
 
   const registerAdmin = async () => {
     try {
-      const res = await customAxios.post('auth/sign-up', newAdmin);
+      const res = await axios.post('http://localhost:4200/api/v1/auth/sign-up', newAdmin);
       console.log('Ответ сервера после регистрации:', res.data); // Лог ответа сервера
       alert('Администратор успешно зарегистрирован');
       setNewAdmin({ email: '', password: '', name: '' });
 
       // Обновляем список администраторов
-      const updatedRes = await customAxios.get('user/get');
+      const updatedRes = await axios.get('http://localhost:4200/api/v1/user/get');
       if (Array.isArray(updatedRes.data)) {
         setAdmins(updatedRes.data); // Обновляем массив администраторов
       }
@@ -50,7 +50,7 @@ const Administrators = () => {
 
   const deleteAdmin = async (id) => {
     try {
-      await customAxios.delete(`user/delete/${id}`);
+      await axios.delete(`http://localhost:4200/api/v1/user/delete/${id}`);
       alert('Администратор удалён');
       setAdmins(admins.filter(admin => admin.id !== id)); // Убираем удаленного администратора из списка
     } catch (err) {
