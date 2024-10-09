@@ -1,54 +1,61 @@
 .footer {
     background-color: #3D3F68;
-    width: 100%;
-    height: 800px;
+    max-width: 100%;
+    height: auto;
 }
 
 .footer-container {
-    padding: 100px;
+    padding: 5vw;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
 }
 
 .content-left {
+    .group-1 {
+        display:contents;
+        align-items: center;
+        justify-content: center;
+        gap: 10vw;
+    }
+    height: auto;
     h1 {
-        font-size: 36px;
+        font-size: 2vw;
         font-weight: 200;
     }
     p {
-        font-size: 25px;
+        font-size: 1.2vw;
         font-weight: 200;
     }
     display:grid;
-    gap: 50px;
+    gap: 1vw;
     .contacts {
         display:grid;
-        gap: 10px;
+        gap: 1vw;
     }
     .partners {
         display:grid;
-        gap: 15px;
+        gap: 1vw;
         .logos {
             display: flex;
-            gap: 15px;
+            gap: 1vw;
         }
         .logo {
-            border-radius: 20px;
-            width: 100px;
-            height: 100px;
+            border-radius: 1.2vw;
+            width: 6.5vw;
+            height: 6.5vw;
         }
     }
     .links {
         display:grid;
-        gap: 15px;
+        gap: 1vw;
         .icons {
             display: flex;
-            gap: 25px;
+            gap: 2vw;
             .ico {
-                padding: 10px;
-                width: 90px;
-                height: 90px;
+                padding: 1vw;
+                width: 6vw;
+                height: 6vw;
                 background-color: #B3CBFF;
                 border-radius: 100px;
                 border: 2px solid #B3CBFF;
@@ -56,8 +63,9 @@
         }
     }
     .developers {
-        max-width: 300px;
+        max-width: 15vw;
         color: #CACBE0;
+        text-align: center;
         h2 {
             text-align: center;
         }
@@ -66,7 +74,7 @@
 }
 
 .line1 {
-    padding: 300px 0;
+    padding: 3vw 0;
     width: 5px;
     background-color: #ffffff;
     border-radius: 30px;
@@ -76,29 +84,162 @@
     .container-left {
         display: grid;
         align-items: center;
+        gap: 3vw;
         text-align: center;
-        padding-left: 10px;
+        padding-left: 1vw;
     }
     .text-content {
         max-width: 500px;
-        font-size: 25px;
+        font-size: 2vw;
         display: flex;
         align-items: center;
+        justify-content: center;
         text-align: center;
         h2 {
             font-weight: 200;
-            font-size: 35px;
+            font-size: 2vw;
         }
     }
     .ico-location {
         font-size: 30px;
     }
     .map {
+
         border-radius: 30px;
     }
-    .logoSFEDU {
-        width: 200px;
-        height: 200px;
+
+    .map iframe {
+        width: 50vw; /* Задаем ширину карты в 80% от ширины окна браузера */
+        height: 30vw; /* Задаем высоту карты в 50% от высоты окна браузера */
+        border: 0; /* Убираем границу */
+        border-radius: 30px; /* Добавляем скругленные углы */
+    }
+}
+
+@media (max-width: 780px) {
+    .footer {
+        background-color: #3D3F68;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footer-container {
+        padding: 5vw;
         color: #ffffff;
+        display: grid;
+        justify-content: center;
+    }
+    
+    .content-left {
+        .group-1 {
+            display:contents;
+            align-items: center;
+            justify-content: center;
+            gap: 10vw;
+        }
+        h1 {
+            font-size: 3vw;
+            font-weight: 200;
+        }
+        p {
+            font-size: 2vw;
+            font-weight: 200;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5vw;
+
+        justify-content: center;
+        .contacts {
+            display:grid;
+            gap: 1vw;
+        }
+        .partners {
+            display:grid;
+            gap: 1vw;
+            .logos {
+                display: flex;
+                gap: 1vw;
+            }
+            .logo {
+                border-radius: 1.2vw;
+                width: 6.5vw;
+                height: 6.5vw;
+            }
+        }
+        .links {
+            display:grid;
+            gap: 1vw;
+            .icons {
+                display: flex;
+                gap: 2vw;
+                .ico {
+                    padding: 1vw;
+                    width: 6vw;
+                    height: 6vw;
+                    background-color: #B3CBFF;
+                    border-radius: 100px;
+                    border: 2px solid #B3CBFF;
+                }
+            }
+        }
+        .developers {
+            max-width: 15vw;
+            color: #CACBE0;
+            text-align: center;
+            p {
+                font-size: 1vw;
+            }
+            h2 {
+                font-size: 2vw;
+                text-align: center;
+            }
+        }
+        padding-bottom: 5vw;
+    
+    }
+    
+    .line1 {
+        padding: 0.3vw 37vw;
+        width: 5px;
+        background-color: #ffffff;
+        border-radius: 30px;
+    }
+    
+    .contetn-right {
+        padding-top: 5vw;
+        .container-left {
+            display: grid;
+            align-items: center;
+            gap: 2vw;
+            text-align: center;
+            padding-left: 1vw;
+        }
+        .text-content {
+            max-width: 500px;
+            font-size: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            h2 {
+                font-weight: 200;
+                font-size: 2vw;
+            }
+        }
+        .ico-location {
+            font-size: 30px;
+        }
+        .map {
+    
+            border-radius: 30px;
+        }
+    
+        .map iframe {
+            width: 70vw; /* Задаем ширину карты в 80% от ширины окна браузера */
+            height: 40vw; /* Задаем высоту карты в 50% от высоты окна браузера */
+            border: 0; /* Убираем границу */
+            border-radius: 30px; /* Добавляем скругленные углы */
+        }
     }
 }
