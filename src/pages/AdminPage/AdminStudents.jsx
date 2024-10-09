@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { RiUserForbidLine, RiUserSettingsLine, RiUserAddLine } from "react-icons/ri";
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import AddStudent from './AddStudent';
-import axios from 'axios';
+import customAxios from "../../axios";
 import { FiFilter } from "react-icons/fi";
 import './Admin.css';
 import EditStudent from './EditStudent';
@@ -36,9 +36,9 @@ const AdminStudents = () => {
   const [filterTypeOfLearning, setFilterTypeOfLearning] = useState('Все');
 
   useEffect(() => {
-      axios.get('http://localhost:4200/api/v1/student/get')
+        customAxios.get(`student/get`)
           .then(res => setRecords(res.data));
-  }, []);
+  }, [])
 
   const addRecord = (newRecord) => {
       setRecords([...records, newRecord]);
@@ -58,7 +58,7 @@ const AdminStudents = () => {
   const deleteRecord = (id) => {
       const confirmDelete = window.confirm("Вы действительно хотите удалить данную анкету?");
       if (confirmDelete) {
-          axios.delete(`http://localhost:4200/api/v1/student/delete/${id}`)
+            customAxios.delete(`student/delete/${id}`)
               .then(() => {
                   setRecords(records.filter(record => record.id !== id));
               })
