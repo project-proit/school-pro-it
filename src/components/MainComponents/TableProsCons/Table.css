@@ -3,9 +3,10 @@
     justify-content: center;
     margin-top: 2vw;
     overflow-x: auto;
-  }
+}
 
   .container-pros-cons {
+    background-color: #ffffff;
     padding: 3vw;
     display:grid;
     text-align: center;

@@ -213,7 +213,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        z-index: 1000;
 
         p {
             font-size: 0px;

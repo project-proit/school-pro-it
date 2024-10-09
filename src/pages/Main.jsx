@@ -4,6 +4,7 @@ import Promo from '../components/MainComponents/Promo/Promo';
 import AboutSchool from '../components/MainComponents/AboutSchool/AboutSchool';
 import SocialMediaQR from '../components/MainComponents/SocialMediaQR/SocialMediaQR';
 import Table from '../components/MainComponents/TableProsCons/Table';
+import VideoBlock from '../components/MainComponents/VideoBlock/VideoBlock';
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <AboutSchool />
         <SocialMediaQR />
         <Table />
+        <VideoBlock />
       </div>
     </div>
   )
