@@ -2,7 +2,7 @@
 import './index.css';
 import React, { useState } from 'react'; // Импортируем useState
 import AdminMain from './pages/AdminPage/AdminMain';
-import About from './pages/about';
+import About from './pages/About';
 import Main from './pages/Main';
 import Intensives from './pages/Intensives';
 import Specialties from './pages/Specialties';
