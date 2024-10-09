@@ -88,13 +88,14 @@
 
 .admin-page {
   padding-top: 200px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 3vw;
+  padding-right: 3vw;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1vw;
   background-color: #6064B9;
   h1 {
+    font-size: 2vw;
     color:#ffffff;
   }
 }
@@ -102,13 +103,13 @@
 .total-applications {
   color: #ffffff;
   display: flex;
-  gap: 130px;
+  gap: 10vw;
   justify-content: space-between;
   h4 {
-    font-size: 24px;
+    font-size: 1.3vw;
     font-weight: 400;
   }
-  margin-bottom: 40px;
+  margin-bottom: 4vw;
 }
 
 .table-container {
@@ -120,13 +121,13 @@ table {
   border-collapse: collapse;
   background-color: #364374;
   color: #ffff;
-  font-size: 18px;
+  font-size: 1vw;
   overflow-x: auto; /* прокрутка */
   width: 100%;
 }
 
 .selector-column {
-  padding: 20px 0;
+  padding: 0.5vw 0;
 }
 
 /* ------------Table------------ */
@@ -200,14 +201,14 @@ th {
 }
 
 .icon-del:hover {
-  color:#ffff;
+  color:#ffffff;
   background-color: #C494EA;
   transform: scale(0.95);
   transition: 0.8s all;
 }
 
 .icon-accept {
-  color:#ffff;
+  color:#ffffff;
   background-color: inherit;
   width:50px;
   border-radius: 30px;
@@ -270,7 +271,7 @@ th {
 
 .modal {
   padding-top: 100px;
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

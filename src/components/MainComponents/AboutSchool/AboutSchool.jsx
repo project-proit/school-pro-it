@@ -5,7 +5,7 @@ import Circle from './Circle';
 
 const AboutSchool = () => {
   return (
-    <div className='container-about'>
+    <div id='About' className='container-about'>
         <div className="about-school">
             <div className='about-conteiner'>
                 <div><h2 className="about-school-title">О ШКОЛЕ ПРО IT</h2></div>

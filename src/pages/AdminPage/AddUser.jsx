@@ -60,7 +60,6 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 <option value="На рассмотрении">На рассмотрении</option>
                 <option value="Принят">Принят</option>
                 <option value="Не принят">Не принят</option>
-                <option value="На рассмотрении">На рассмотрении</option>
             </select>
             <select 
                 name="specialty" 

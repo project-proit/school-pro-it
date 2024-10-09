@@ -14,8 +14,6 @@ const LayoutAdmin = ({ isAuthenticated, setIsAuthenticated }) => { // Прини
       )}
 
       <Outlet />
-
-      <footer>2021</footer>
     </div>
   )
 }

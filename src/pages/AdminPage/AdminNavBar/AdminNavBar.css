@@ -14,12 +14,22 @@
     height: 100px;
     justify-content:space-between;
     background: #474BAE;
-    padding: 0 120px;
+    padding: 0 3vw;
 }
 
 .logos {
     display: flex;
     gap: 15px;
+    .Logo {
+        width: 7vw;
+        min-width: 100px;
+        height: auto;
+    }
+    .Logo2 {
+        width: 10vw;
+        min-width: 150px;
+        height: auto;
+    }
 }
 
 .menu {
@@ -57,6 +67,15 @@ a:hover {
 }
 
 .hello {
+    font-size: 1vw;
+    background-color: #81E7EE;
+    padding: 7px 15px;
+    border: 3px solid#81E7EE;
+    border-radius: 30px;
+}
+
+.exit {
+    font-size: 1vw;
     background-color: #81E7EE;
     padding: 7px 15px;
     border: 3px solid#81E7EE;
@@ -141,3 +160,12 @@ li {
 }
 
 /* ------------Navbar1------------ */
+
+@media (max-width: 820px) {
+    .hello {
+        display: none;
+    }
+    .exit {
+        display: none;
+    }
+}

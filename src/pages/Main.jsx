@@ -5,6 +5,7 @@ import AboutSchool from '../components/MainComponents/AboutSchool/AboutSchool';
 import SocialMediaQR from '../components/MainComponents/SocialMediaQR/SocialMediaQR';
 import Table from '../components/MainComponents/TableProsCons/Table';
 import VideoBlock from '../components/MainComponents/VideoBlock/VideoBlock';
+import SliderReviews from '../components/MainComponents/SliderReviews/SliderReviews';
 
 const Main = () => {
   return (
@@ -19,6 +20,7 @@ const Main = () => {
         <SocialMediaQR />
         <Table />
         <VideoBlock />
+        {/* <SliderReviews /> */}
       </div>
     </div>
   )

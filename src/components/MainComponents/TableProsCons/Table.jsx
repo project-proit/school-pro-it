@@ -5,7 +5,7 @@ import './Table.css';
 
 const Table = () => {
   return (
-    <div className='container-pros-cons'>
+    <div id="Table" className='container-pros-cons'>
         <div className='title-pros-cons'><h1>У нас есть интенсивы! </h1></div>
         <div className="table-container">
             <table className="comparison-table">

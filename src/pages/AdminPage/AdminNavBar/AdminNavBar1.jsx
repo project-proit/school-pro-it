@@ -34,13 +34,13 @@ const AdminNavBar1 = ({ setIsAuthenticated }) => { // Передаем setIsAuth
     <div className='header'>
       <div className='header-content'>
         <div className='logos'>
-          <img src={LogoAdmin1} alt='Logo1' />
-          <img src={LogoAdmin2} alt='Logo2' />
+          <img className='Logo' src={LogoAdmin1} alt='Logo1' />
+          <img className='Logo2' src={LogoAdmin2} alt='Logo2' />
         </div>
 
         <div className='menu-1' ref={menuRef}>
           <Link className='hello' to=''>Hello, admin!</Link>
-          <Link className='hello' to='/' onClick={handleLogout}>Выйти</Link>
+          <Link className='exit' to='/' onClick={handleLogout}>Выйти</Link>
           <div onClick={() => { setNav(!nav) }} className='btn-open-menu'><HiMenu className='icon-menu' /></div>
           <nav className={`dropdown__menu ${nav ? 'active' : 'inactive'}`}>
             <ul className='ul-open-menu'>
