@@ -73,5 +73,29 @@
   
   color: rgb(255, 255, 255);
 }
-
+@media (max-width: 768px) {
+  .slider-container1 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .slider {
+    display: block; /* Make it a single element */
+    gap: 0;
+  }
+  .review-card {
+    width: 100%;
+    height: auto;
+  }
+  .prev-button,
+  .next-button {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+  }
+  .slider-arrowcont{
+    display: flex;
+    gap: 10px;
+  }
+}
   
