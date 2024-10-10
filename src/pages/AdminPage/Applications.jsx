@@ -44,6 +44,10 @@ const Applications = ( {setIsAuthenticated} ) => {
         }
     };
 
+    useEffect(() => {
+        console.log("Состояние изменилось:", records);
+    }, [records]);
+    
     const handleAcceptClick = (record) => {
         if (record.status === 'Принят') return;
         const studentData = {
@@ -61,11 +65,14 @@ const Applications = ( {setIsAuthenticated} ) => {
         // Добавляем студента в таблицу "Students"
         addStudent(studentData)
             .then(() => {
-                customAxios.put(`application/update/${record.id}`, { status: 'Принят' })
+                customAxios.put(`application/${record.id}`, { status: 'Принят' })
                     .then(() => {
-                        setRecords(records.map(r => 
-                            r.id === record.id ? { ...r, status: 'Принят' } : r
-                        ));
+                        setRecords(prevRecords =>
+                            prevRecords.map(r =>
+                                r.id === record.id ? { ...r, status: 'Принят' } : r
+                            )
+                        );
+                        console.log("Состояние после изменения:", records);
                     })
                     .catch(err => {
                         console.error("Ошибка при обновлении статуса заявки:", err);

@@ -3,39 +3,45 @@
     padding: 0;
     box-sizing: border-box;
     z-index: 10;
+    height: 100vh; /* Гарантируем полную высоту страницы */
 }
 
 .admin-auth-content {
     background-color: #989CF2;
-    height: 100vh;
+    height: 70vw;
     width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Минимальная высота на весь экран */
 }
 
 .form-auth-content {
-    margin-top: 100px;
-    height: 700px;
-    width: 700px;
+    height: 40vw;
+    width: 50vw;
     border-radius: 30px;
     background-color: #ffff;
-    align-items: center;
     color: #989CF2;  
     h2 {
         color: #3D3F68;
         font-weight: 400;
-        font-size: 40px;
+        font-size: 2.5vw;
         text-align: center;
     }
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .all-content {
-    width: 507px;
-    height: 604px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  width: 40vw;
+  height: 40vw;
 }
 
 .text-error {
@@ -45,8 +51,10 @@
 }
 
 .auth-fields {
-    margin: 25px auto;
+    display: grid;
     align-items: center;
+    justify-content: center;
+    gap: 2vw;
 }
 
 .form-auth-input {
@@ -57,20 +65,20 @@
     color: #BDBCF8;
     font-size: medium;
     background-color: white;
-    width: 500px;
-    height: 80px;
-    font-size: 1.7rem;
+    width: 35vw;
+    height: 6vw;
+    font-size: 2vw;
     text-align: left;
     cursor: pointer;
-    margin: 18px auto;
+    
 }
 
 .btn-auth-admin {
   color: #015073;
   border-radius: 50px;
-  width: 500px;
-  height: 80px;
-  font-size: 25px;
+  width: 35vw;
+  height: 6vw;
+  font-size: 1.8vw;
   font-weight: 600;
   cursor: pointer;
   background-color: #81E7EE;
@@ -84,10 +92,53 @@
     transition: 0.8s all;
 }
 
+/* @media (max-width: 650px) {
+  .form-auth-content {
+    margin-top: 5vw;
+    height: 40vw;
+    width: 50vw;
+  }
+} */
+@media (max-width: 650px) {
+  .form-auth-content {
+      width: 60vw;
+      height: 60vw; /* Высота будет автоматически подстраиваться */
+  }
+
+  .form-auth-input, .btn-auth-admin {
+      width: 50vw; /* Уменьшаем ширину полей и кнопки для мобильных устройств */
+      font-size: 3vw;
+      height: auto;
+      padding: 10px;
+  }
+
+  .form-auth-content h2 {
+      font-size: 3vw; /* Уменьшаем размер заголовка */
+  }
+}
+@media (max-width: 320px) {
+  .form-auth-content {
+      width: 80vw;
+      height: 80vw; /* Высота будет автоматически подстраиваться */
+  }
+
+  .form-auth-input, .btn-auth-admin {
+      width: 70vw; /* Уменьшаем ширину полей и кнопки для мобильных устройств */
+      font-size: 4vw;
+      height: auto;
+      padding: 10px;
+  }
+
+  .form-auth-content h2 {
+      font-size: 4vw; /* Уменьшаем размер заголовка */
+  }
+}
+
+
 /* админ панель */
 
 .admin-page {
-  padding-top: 200px;
+  padding-top: 15vw;
   padding-left: 3vw;
   padding-right: 3vw;
   display: flex;
@@ -113,8 +164,9 @@
 }
 
 .table-container {
-  max-width: 100%;
-  overflow-x: auto;
+    width: 100%;
+    overflow-x: auto;
+    padding-left: 4vw;
 }
 
 table {
@@ -124,6 +176,8 @@ table {
   font-size: 1vw;
   overflow-x: auto; /* прокрутка */
   width: 100%;
+  table-layout: auto;
+  margin-left: 0;
 }
 
 .selector-column {
@@ -132,10 +186,11 @@ table {
 
 /* ------------Table------------ */
 td, th {
-  padding:15px;
-  padding-left: 20px;
+  padding:1vw 1vw 1vw 0;
+  /* padding-left: 20px; */
   border: 2px solid transparent;
   box-sizing: border-box;
+  white-space: nowrap;
 
 }
 
@@ -149,8 +204,9 @@ td:hover {
 }
 
 th {
-  padding: 15px;
+  padding: 1vw 0;
   background-color: #2E2962;
+  white-space: nowrap;
 }
 
 .btn-add {
@@ -159,8 +215,9 @@ th {
   border: 3px solid #81E7EE;
   border-radius: 30px;
   width: 6vw;
-  height: 5vh;
-  font-size: 2rem;
+  min-width: 50px;
+  height: 3vw;
+  font-size: 2vw;
   cursor: pointer;
 }
 
@@ -173,15 +230,17 @@ th {
 
 .actions-btns {
   display:flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .icon-edit {
   color:#ffff;
   background-color: inherit;
-  width: 50px;
+  width: 3vw;
   border: none;
   border-radius: 30px;
-  font-size: 26px;
+  font-size: 1.7vw;
 }
 
 .icon-edit:hover {
@@ -194,10 +253,10 @@ th {
 .icon-del {
   color:#ffff;
   background-color: inherit;
-  width:50px;
+  width:3vw;
   border-radius: 30px;
   border: none;
-  font-size: 26px;
+  font-size: 1.7vw;
 }
 
 .icon-del:hover {
@@ -210,10 +269,10 @@ th {
 .icon-accept {
   color:#ffffff;
   background-color: inherit;
-  width:50px;
+  width:3vw;
   border-radius: 30px;
   border: none;
-  font-size: 26px;
+  font-size: 1.7vw;
 }
 
 .icon-accept:hover {
@@ -225,9 +284,9 @@ th {
 
 .pagination {
   color: #2E2962;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 400;
-  right: 60px;
+  right: 2vw;
   position: absolute;
   display: flex;
   align-items: center;
@@ -235,7 +294,7 @@ th {
 }
 
 .arrows-for-pagination {
-  font-size: 32px;
+  font-size: 3vw;
   cursor: pointer;
 }
 .arrows-for-pagination:hover {
@@ -250,21 +309,67 @@ th {
 
 .filter-icon {
   cursor: pointer;
-  padding-top: 5px;
+  padding-top: 0.1vw;
 }
 
 .type-of-lean-select {
   position: absolute;
-  top: 20px;
+  font-size: 1vw;
+  top: 1vw;
   left: 0;
   color:#ffffff;
-  width:5vw;
-  height: 3vh;
+  width: 8vw;
+  height: 7vh;
   border: 3px solid #81E7EE;
   border-radius: 30px;
   background-color: #2E2962;
 }
 
+@media (max-width: 650px) {
+  .table {
+    font-size: 5vw;
+  }
+  .admin-page {
+    padding-top: 20vw;
+  }
+  .total-applications {
+    color: #ffffff;
+    display: flex;
+    gap: 10vw;
+    justify-content: space-between;
+    h4 {
+      font-size: 3vw;
+      font-weight: 400;
+    }
+    margin-bottom: 4vw;
+  }
+  .admin-page {
+    padding-top: 25vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    background-color: #6064B9;
+    h1 {
+      font-size: 3vw;
+      color:#ffffff;
+    }
+  }
+  .btn-add {
+    width: 6vw;
+    height: 5vw;
+    font-size: 4vw;
+  }
+}
+@media (max-width: 320px) {
+  .table {
+    font-size: 4vw;
+  }
+  .admin-page {
+    padding-top: 35vw;
+  }
+}
 /* ------------Table----------- */
 
 /* формы */

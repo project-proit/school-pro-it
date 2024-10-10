@@ -1,9 +1,18 @@
 .column-selector {
-    font-size: 20px;
+    font-size: 1.2vw;
     color:#ffffff;
-    gap: 100px;
+    display:contents;
+    justify-content: space-between;
 }
 .check-box {
+    width: 1.2vw;
     padding: 10px;
     gap: 100px;
+}
+
+.check-box input[type="checkbox"] {
+    width: 1.2vw;
+    height: 1.2vw;
+    transform: scale(1.5); /* Увеличиваем размер чекбокса */
+    margin-right: 0.1vw; /* Добавляем отступ справа от чекбокса */
 }
