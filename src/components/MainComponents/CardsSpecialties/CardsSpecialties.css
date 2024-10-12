@@ -3,7 +3,12 @@
     flex-direction: column;
     align-items: center;
     padding: 1vw;
-    gap: 1px;
+    gap: 4vw;
+  }
+
+  .title-cards-specialties {
+    font-size: 3vw;
+    color:#651366;
   }
   
   .tiles {

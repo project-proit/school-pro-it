@@ -19,8 +19,8 @@
 
 .promo-text-and-btns {
     position: absolute;
-    top: 170px;
-    left: 8vw;
+    top: 12vw;
+    left: 7.7vw;
     color: #3D3F68;
 }
 
@@ -96,20 +96,38 @@
 }
 
 /* Медиа-запросы для адаптивности */
-/* @media (min-width: 1552px) {
+@media (min-width: 1700px) {
     .promo-text-and-btns {
-        top: 165px;
+        top: 11.5vw;
         left: 8vw;
     }
 
     .promo-text-and-btns .btns {
         padding-top: 5vw;
     }
-} */
+}
 
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
     .promo-text-and-btns {
-        top: 160px;
+        top: 13vw;
+        left: 8vw;
+    }
+
+    .promo-text-and-btns .btns {
+        padding-top: 5vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .promo-text-and-btns {
+        top: 15vw;
+        left: 8vw;
+    }
+}
+
+@media (max-width: 1110px) {
+    .promo-text-and-btns {
+        top: 15vw;
         left: 8vw;
     }
 
@@ -129,9 +147,9 @@
     }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
     .promo-text-and-btns {
-        top: 145px;
+        top: 19vw;
         left: 8vw;
     }
 
@@ -140,14 +158,28 @@
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
     .promo-text-and-btns {
-        top: 130px;
+        top: 22vw;
+        left: 8vw;
+    }
+}
+
+@media (max-width: 570px) {
+    .promo-text-and-btns {
+        top: 25vw;
         left: 8vw;
     }
 
     .promo-text-and-btns .btns {
         padding-top: 4.5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .promo-text-and-btns {
+        top: 29vw;
+        left: 8vw;
     }
 }
 

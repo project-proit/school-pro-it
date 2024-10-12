@@ -183,7 +183,9 @@
 }
 
 .form2 {
-    padding: 3rem 4rem;
+    padding: 5vw;
+    display: grid;
+    align-items: center;
     color: #938FBE;
     font-size: 1.3rem;
     align-items: center;

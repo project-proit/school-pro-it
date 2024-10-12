@@ -62,7 +62,7 @@ const CardsSpecialties = () => {
 
   return (
     <div id="Specialties" className="tile-container">
-      <h2>Ознакомьтесь с направлениями</h2>
+      <h2 className='title-cards-specialties'>Ознакомьтесь с направлениями</h2>
       <div className="tiles">
         {tilesData.map((tile, index) => (
           <Tile key={index} icon={tile.icon} title={tile.title} />
