@@ -390,15 +390,15 @@ th {
   transition: opacity 0.3s ease;
 }
 
-.modal input {
+.modal-input {
   padding-left: 2.3rem;
   border-radius: 3rem;
   border-color: #BDBCF8;
   border: 3px solid #BDBCF8;
   color: #BDBCF8;
   background-color: white;
-  width: 10vw;
-  height: 8vh;
+  width: 25vw;
+  height: 5vw;
   font-size: 1.7rem;
   text-align: left;
   cursor: pointer;
@@ -455,12 +455,12 @@ th {
   margin-bottom: 10px;
 }
 
-.modal-content form input, form select {
+/* .modal-content form input, form select {
   width: 100%;
   padding: 15px;
   color:#BDBCF8;
   margin-bottom: 20px;
-}
+} */
 
 .modal-content button {
   margin-top: 10px;

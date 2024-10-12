@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Form.css";
 
 const SecondFormPageAdult = ({ formData, setFormData }) => {
   const [errors, setErrors] = useState({})
@@ -30,6 +31,7 @@ const SecondFormPageAdult = ({ formData, setFormData }) => {
     <div className='form1'>
     <div className='header1'><h1>Оставьте ваши данные <br/> чтобы, мы связались с вами!</h1></div>
     <form onSubmit={handleSubmit}>
+        <div>
         <input type='text' placeholder='Ваш телефон' name='phone'
         value={formData.phone}
         className='btn-type-of-learning'
@@ -55,6 +57,7 @@ const SecondFormPageAdult = ({ formData, setFormData }) => {
         {errors.url && <span>{errors.url}</span>}
         
         <p>Нажимая кнопку, Вы даете согласие на обработку персональных данных</p>
+        </div>
     </form>
   </div>
   )

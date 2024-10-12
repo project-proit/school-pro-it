@@ -13,14 +13,14 @@ const FirstFormPage = ({ formData, setFormData }) => {
           <input type='text' placeholder='ФИО' name='fullName'
           value={formData.fullName}
           required
-          className='btn-type-of-learning'
+          className='field__input'
           onChange={(event) =>
             setFormData({ ...formData, fullName: event.target.value })
           }/>
           
           <input type='text' placeholder='Возраст' name='age'
           value={formData.age}
-          className='btn-type-of-learning'
+          className='field__input'
           onChange={(event) =>
             setFormData({ ...formData, age: event.target.value })
           } required/>
@@ -44,7 +44,7 @@ const FirstFormPage = ({ formData, setFormData }) => {
             setFormData({ ...formData, specialty: event.target.value })
           } required>
               <option value="">Направление</option>
-              <option value="Таганрог">Искусственный интеллект</option>
+              <option value="ТагаИскусственный интеллектнрог">Искусственный интеллект</option>
               <option value="Web-разработка">Web-разработка</option>
               <option value="Мобильная разработка">Мобильная разработка</option>
               <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>

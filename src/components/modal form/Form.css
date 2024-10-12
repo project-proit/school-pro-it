@@ -11,6 +11,7 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
+    z-index: 100001;
 }
 
 .modal.active {
@@ -21,25 +22,25 @@
 .modal__content {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1vw;
     border-radius: 2rem;
     background-color: #ffff;
     transform: scale(0.5);
     transition: 0.4s all;
-    width: 37vw;
-    height: 92vh;
+    width: 40vw;
+    height: 40vw;
     align-items: center;
+    overflow-y:scroll;
+    overflow-x: hidden;
 }
 
 .container__form {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1vw;
     margin-top: auto;
-    position: fixed;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 1vw;
     z-index: 1000;
 }
 
@@ -48,24 +49,24 @@
 }
 
 .field p {
-    padding: 0.3rem;
+   margin-bottom:0.1vw;
 }
 
 .first-field {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
 }
 
 .second-field {
-    padding-bottom: 4rem;
+    padding-bottom: 1vw;
 }
 
 .btn-back, .btn-next {
     color: #ffff;
     border-radius: 50px;
-    width: 15vw;
-    height: 10vh;
-    font-size: 2rem;
+    width: 12vw;
+    height: 4vw;
+    font-size: 1.5vw;
     cursor: pointer;
 }
 
@@ -88,13 +89,14 @@
 }
 
 .form0 {
-    padding: 3rem 4rem;
+    font-size: 1vw;
+    padding: 4vw 4vw 0 4vw;
     align-items: center;
     text-align: center;
 }
 
 .header1 h1 {
-    font-size: 220%;
+    font-size: 2vw;
     color: #3D3F68;
     font-weight: 400;
     text-align: center;
@@ -109,11 +111,12 @@
 .form0 p {
     color: #BDBCF8;
     text-align: left;
-    padding-left: 3.5rem;
+    padding-left: 3vw;
+    font-size: 1vw;
 }
 
 .btn-type-of-learning {
-    padding-left: 2.3rem;
+    padding-left: 2vw;
     border-radius: 3rem;
     border-color: #BDBCF8;
     border: 3px solid #BDBCF8;
@@ -121,8 +124,8 @@
     font-size: medium;
     background-color: white;
     width: 25vw;
-    height: 9vh;
-    font-size: 1.7rem;
+    height: 5vw;
+    font-size: 2vw;
     text-align: left;
     cursor: pointer;
 }
@@ -143,7 +146,8 @@
 }
 
 .field__input {
-    padding-left: 2.3rem;
+    padding-left: 2vw;
+    margin-bottom: 1vw;
     border-radius: 3rem;
     border-color: #BDBCF8;
     border: 3px solid #BDBCF8;
@@ -151,20 +155,20 @@
     font-size: medium;
     background-color: white;
     width: 25vw;
-    height: 9vh;
-    font-size: 2.9rem;
+    height: 5vw;
+    font-size: 2vw;
     text-align: left;
     cursor: pointer;
 }
 
 .form1 {
-    padding: 3rem 3.5rem;
+    padding: 4vw 4vw 0 4vw;
     align-items: center;
     text-align: center;
 }
 
 .btn-type-of-learning + .btn-type-of-learning {
-    margin-top: 0.8rem;
+    margin-top: 1vw;
 }
 
 .form1 .header1 {
@@ -173,7 +177,7 @@
 
 .form1 p {
     color: #938FBE;
-    font-size: 1rem;
+    font-size: 1vw;
     padding: 1rem;
     text-align: center;
 }
@@ -187,12 +191,12 @@
 }
 
 .form2 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.7vw;
+    margin-bottom:2vw;
 }
 
 .form2 p + p {
-    margin: 2rem;
+    margin: 2vw;
 }
 
 @media (max-width: 720px) {

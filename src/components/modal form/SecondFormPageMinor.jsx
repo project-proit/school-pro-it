@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Form.css";
 
 const SecondFormPageMinor = ({ formData, setFormData }) => {
   const [errors, setErrors] = useState({})
