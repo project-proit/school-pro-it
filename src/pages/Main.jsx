@@ -5,7 +5,7 @@ import AboutSchool from '../components/MainComponents/AboutSchool/AboutSchool';
 import SocialMediaQR from '../components/MainComponents/SocialMediaQR/SocialMediaQR';
 import Table from '../components/MainComponents/TableProsCons/Table';
 import VideoBlock from '../components/MainComponents/VideoBlock/VideoBlock';
-import SliderReviews from '../components/MainComponents/SliderReviews/SliderReviews';
+import CardsSpecialties from '../components/MainComponents/CardsSpecialties/CardsSpecialties';
 
 const Main = () => {
   return (
@@ -18,9 +18,9 @@ const Main = () => {
         <Promo />
         <AboutSchool />
         <SocialMediaQR />
+        <CardsSpecialties />
         <Table />
         <VideoBlock />
-        {/* <SliderReviews /> */}
       </div>
     </div>
   )

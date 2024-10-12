@@ -34,16 +34,16 @@ const Navbar = () => {
             }
           >
             <li>
-              <Link to='/'>Главная</Link>
+              <Link to='#Main'>Главная</Link>
             </li>
             <li>
-              <Link to='/specialties'>Направления</Link>
+              <Link to='#Specialties'>Направления</Link>
             </li>
             <li>
-              <Link to='/about'>О школе</Link>
+              <Link to='#About'>О школе</Link>
             </li>
             <li>
-              <Link to='/contacts' className={style.header_contacts}>Контакты</Link>
+              <Link to='#Contacts' className={style.header_contacts}>Контакты</Link>
             </li>
           </ul>
           <div onClick={() => setNav(!nav)} className={style.mobile_btn}>

@@ -3,7 +3,9 @@ import photoback from'../../../assets/photoback.png'
 import './Promo.css';
 import ButtonMain from '../../Button/ButtonMain';
 import { PiTriangleLight } from "react-icons/pi";
-import { Form, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Form from '../../modal form/Form.jsx'
+
 
 const Promo = () => {
     useEffect(() => {
@@ -27,7 +29,7 @@ const Promo = () => {
     const [modalActive, setModalActive] = useState(false);
 
   return (
-    <div className='container-promo'>
+    <div id="Main" className='container-promo'>
         <div className='content'>
             <div className='promo-text-and-btns'>
                 <div className='promo-text'>
@@ -41,7 +43,7 @@ const Promo = () => {
                         </ButtonMain>
                     </div>
                     <div>
-                        <Link to='/'>
+                        <Link to='#Video'>
                             <div className='video-btn-and-text'>
                                 <div className='btn-vid'><button className='btn-video'><PiTriangleLight className='btn-triangle' /></button></div>
                                 <div><p>Посмотрите видео про учебу в нашей школе</p></div>
@@ -49,7 +51,7 @@ const Promo = () => {
                         </Link>
                     </div>
                 </div>
-                {/* <Form active={modalActive} setActive={setModalActive} /> */}
+                <Form active={modalActive} setActive={setModalActive} />
             </div>
             <div className='promo-img'>
                 <img className='img-back' src={photoback} alt='photoback'/>

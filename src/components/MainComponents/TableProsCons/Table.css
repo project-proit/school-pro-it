@@ -21,7 +21,7 @@
   }
   
   .comparison-table {
-    width: 70%;
+    width: 80vw;
     text-align: center;
     background-color: #29b6f6;
     font-family: Arial, sans-serif;
@@ -37,7 +37,7 @@
   .comparison-table th, .comparison-table td {
     padding: 1vw 3vw;
     color: #ffffff;
-    font-size: 1.6vw;
+    font-size: 1.5vw;
   }
   
   .comparison-table th {

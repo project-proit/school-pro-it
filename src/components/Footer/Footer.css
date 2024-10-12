@@ -67,6 +67,7 @@
         color: #CACBE0;
         text-align: center;
         h2 {
+            color: #ffffff;
             text-align: center;
         }
     }
@@ -90,18 +91,19 @@
     }
     .text-content {
         max-width: 500px;
-        font-size: 2vw;
+        font-size: 1vw;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         h2 {
+            color: #ffffff;
             font-weight: 200;
             font-size: 2vw;
         }
     }
     .ico-location {
-        font-size: 30px;
+        font-size: 3vw;
     }
     .map {
 
@@ -228,18 +230,18 @@
             }
         }
         .ico-location {
-            font-size: 30px;
+            font-size: 4vw;
         }
         .map {
     
-            border-radius: 30px;
+            border-radius: 15px;
         }
     
         .map iframe {
             width: 70vw; /* Задаем ширину карты в 80% от ширины окна браузера */
             height: 40vw; /* Задаем высоту карты в 50% от высоты окна браузера */
             border: 0; /* Убираем границу */
-            border-radius: 30px; /* Добавляем скругленные углы */
+            border-radius: 15px; /* Добавляем скругленные углы */
         }
     }
 }

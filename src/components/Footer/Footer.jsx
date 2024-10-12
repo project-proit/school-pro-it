@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.css';
 import { IoLogoVk } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -10,10 +10,21 @@ import Oggetto from '../../assets/Oggetto.png';
 import { MdLocationPin } from "react-icons/md";
 import LogoSfedu from '../../assets/LogoSfedu.png';
 import sfedu from '../../assets/sfedu.png'
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
   return (
-    <div className='footer'>
+    <div id='Contacts' className='footer'>
         <div className='footer-container'>
             <div className='content-left'>
                 <div className='group-1'>
