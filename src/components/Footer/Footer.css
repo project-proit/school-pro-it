@@ -61,6 +61,9 @@
                 border: 2px solid #B3CBFF;
             }
         }
+        a:hover {
+            color:  #3D3F68;
+        }
     }
     .developers {
         max-width: 15vw;
@@ -115,6 +118,31 @@
         height: 30vw; /* Задаем высоту карты в 50% от высоты окна браузера */
         border: 0; /* Убираем границу */
         border-radius: 30px; /* Добавляем скругленные углы */
+    }
+
+    .logosFooter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2vw;
+
+        .logoSchool {
+            width: 10vw;
+            height: auto;
+        }
+
+        .logoOffice {
+            width: 11vw;
+            height: auto;
+        }
+
+
+        .logoSfedu {
+            filter: brightness(0) invert(1);
+            width: 7vw;
+            height: auto;
+        }
     }
 }
 

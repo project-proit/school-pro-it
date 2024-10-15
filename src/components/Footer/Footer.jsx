@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './Footer.css';
 import { IoLogoVk } from "react-icons/io";
-import { FaTelegramPlane } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 import Shellpea from '../../assets/Shellpea.png';
@@ -9,7 +8,8 @@ import Dunice from '../../assets/Dunice.png';
 import Oggetto from '../../assets/Oggetto.png';
 import { MdLocationPin } from "react-icons/md";
 import LogoSfedu from '../../assets/LogoSfedu.png';
-import sfedu from '../../assets/sfedu.png'
+import LogoOffice from '../../assets/LogoOffice.png';
+import LogoSchool from '../../assets/LogoSchool.png';
 import { useLocation } from 'react-router-dom';
 
 function Footer() {
@@ -36,9 +36,9 @@ function Footer() {
                     <div className='partners'>
                         <h1>Партнёры</h1>
                         <div className='logos'>
-                            <img className='logo' src={Shellpea} alt='Shellpea'/>
-                            <img className='logo' src={Dunice} alt='Dunice'/>
-                            <img className='logo' src={Oggetto} alt='Oggetto'/>
+                            <a href='https://shellpea.com/'><img className='logo' src={Shellpea} alt='Shellpea'/></a>
+                            <a href='https://www.edu.dunice.net/'><img className='logo' src={Dunice} alt='Dunice'/></a>
+                            <a href='https://oggetto.ru/'><img className='logo' src={Oggetto} alt='Oggetto'/></a>
                         </div>
                     </div>
                 </div>
@@ -47,9 +47,9 @@ function Footer() {
                     <div className='links'>
                         <h1>Ссылки на нас</h1>
                         <div className='icons'>
-                            <IoLogoVk className='ico' />
-                            <BiLogoTelegram className='ico'/>
-                            <FaWhatsapp className='ico' /> 
+                            <a href='https://vk.com/proittaganrog'><IoLogoVk className='ico' /></a>
+                            <a href='https://t.me/school_pro_it'><BiLogoTelegram className='ico'/></a>
+                            <a><FaWhatsapp className='ico' /></a>
                         </div>
                     </div>
                     <div className='developers'>
@@ -77,7 +77,10 @@ function Footer() {
                             referrerpolicy="no-referrer-when-downgrade">     
                         </iframe>
                     </div>
-                    <div>
+                    <div className="logosFooter">
+                        <div><img className='logoSchool' src={LogoSchool} alt='LogoSchool' /></div>
+                        <div><a href='https://proictis.sfedu.ru/'><img className='logoOffice' src={LogoOffice} alt='LogoOffice' /></a></div>
+                        <div><a href='https://sfedu.ru/'><img className='logoSfedu' src={LogoSfedu} alt='LogoSfedu' /></a></div>
                     </div>
                 </div>
             </div>

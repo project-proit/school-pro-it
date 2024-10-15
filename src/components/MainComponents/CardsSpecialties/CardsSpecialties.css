@@ -1,97 +1,133 @@
 .tile-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  gap: 4vw;
+}
+
+.title-cards-specialties {
+  font-size: 3vw;
+  color: #651366;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+
+.tile {
+  width: calc(30.33% - 10px);
+  margin: 10px 5px;
+  perspective: 600px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tile .front,
+.tile .back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s;
+}
+
+.tile .front {
+  transform: rotateY(0deg);
+}
+
+.tile .back {
+  transform: rotateY(180deg);
+  background-color: #f8f7fb;
+  color: #001cbb;
+  padding: 3%;
+  position: fixed;
+  width: 100%;
+  height: 95%;
+  border-radius: 10px;
+  font-size: 1vw;
+  border: solid #651366;
+}
+
+.tile.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.tile.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.tile img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 80%;
+  gap: 10px;
+}
+
+.tiles-slider {
+  display: flex;
+  gap: 20px;
+}
+
+.tile-wrapper {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .tiles {
+    display: none;
+  }
+
+  .tile {
+    /* display: contents;
     align-items: center;
-    padding: 1vw;
-    gap: 4vw;
+    justify-content: center; */
+    width: 100%;
+    height: auto;
   }
 
   .title-cards-specialties {
-    font-size: 3vw;
-    color:#651366;
+    font-size: 5vw;
   }
-  
-  .tiles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-  
-  .tile {
-    width: calc(33.33% - 10px);
-    margin-bottom: 20px;
-    perspective: 600px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .tile .front,
-  .tile .back {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.8s;
-  }
-  
-  .tile .front {
-    transform: rotateY(0deg);
-  }
-  
+
   .tile .back {
     transform: rotateY(180deg);
-    background-color: #F8F7FB;
+    background-color: #f8f7fb;
     color: #001cbb;
+    font-size: 2.5vw;
     padding: 3%;
     position: fixed;
     width: 100%;
-    height: 95%;
-    border-radius: 10px;
-    font-size: 1vw;
-    border: solid #651366;
+    height: 100%;
   }
-  
-  .tile.flipped .front {
-    transform: rotateY(180deg);
-  }
-  
-  .tile.flipped .back {
-    transform: rotateY(0deg);
-  }
-  
-  .tile img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  /* Медиа-запрос для экранов до 480px */
-  @media (max-width: 480px) {
-    .tiles {
-      flex-wrap: nowrap; /* Отключаем перенос строк */
-      overflow-x: auto;  /* Добавляем горизонтальную прокрутку */
-      scroll-snap-type: x mandatory; /* Добавляем snapping для слайдера */
-    }
-  
-    .tile {
-      width: 100%; /* Карточки занимают всю ширину экрана */
-      margin-bottom: 0;
-      flex: 0 0 100%; /* Одна карточка на экране */
-      scroll-snap-align: center; /* Фиксация по центру при прокрутке */
-    }
-  
-    .tile img {
-      width: 90%; /* Адаптация размера изображения для маленьких экранов */
-    }
-  
-    .back {
-      font-size: 3vw; /* Изменяем размер шрифта для маленьких экранов */
-    }
-  }
-  
+}
