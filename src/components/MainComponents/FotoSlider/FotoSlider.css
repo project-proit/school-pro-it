@@ -1,0 +1,101 @@
+.sliderfoto-containerfoto {  
+    max-width: 100vw;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.sliderfoto-header {
+    border: 3px solid #BDBCF8;
+    border-radius: 50px;
+    margin-bottom: 2vw; /* Отступ между заголовком и слайдером */
+}
+
+.slider-title-foto {
+    padding: 1vw 2vw;
+    font-size: 2.6vw;
+    color: #6064B9;
+    text-align: center;
+}
+
+.sliderfoto-wrapper {
+    position: relative;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.sliderfoto-image {
+    width: 60%; /* Ширина на 100% от контейнера */
+    height: auto; /* Автоматическая высота */
+    border-radius: 20px;
+    border: 5px solid rgba(171, 217, 254, 0.63);
+    object-fit: contain; /* Адаптивное масштабирование изображений */
+}
+
+.sliderfoto-button-next, .sliderfoto-button-prev {
+    font-size: 7vw;
+    color: #A6E9FF;
+    cursor: pointer;
+}
+
+.sliderfoto-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.sliderfoto-nav-item {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: solid #ABD9FE;
+}
+
+.sliderfoto-nav-item.active {
+    background-color: #A6E9FF;
+}
+
+@media (max-width: 1000px) {
+    .sliderfoto-nav-item {
+        width: 2vw;
+        height: 2vw;
+    }
+    .sliderfoto-image {
+        width: 70%; /* Ширина на 100% от контейнера */
+        height: auto; /* Автоматическая высота */
+    }
+    .slider-title-foto {
+        padding: 1vw 2vw;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 420px) {
+    .sliderfoto-nav-item {
+        width: 3vw;
+        height: 3vw;
+    }
+    .sliderfoto-image {
+        width: 80%; /* Ширина на 100% от контейнера */
+        height: auto; /* Автоматическая высота */
+    }
+    .slider-title-foto {
+        padding: 1vw 2vw;
+        font-size: 5vw;
+    }
+    .sliderfoto-button-next, .sliderfoto-button-prev {
+        font-size: 7vw;
+    }
+}

@@ -1,0 +1,135 @@
+.slider-container1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 3vw 6vw 3vw;
+    background-color: #A6E9FF;
+    height: 33vw;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slider-content-rev {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-title {
+    font-size: 2.6vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+    color: #6064B9;
+}
+
+.slider-arrowcont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    gap: 5vw;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.review-card {
+    width: 25vw;
+    height: 14vw;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #BB71F6;
+}
+
+.review-author {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.review-text {
+    font-size: 1vw;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.prev-button,
+.next-button {
+    border: none;
+    font-size: 7vw;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .slider-container1 {
+        height: 45vw;
+    }
+
+    .review-card {
+        width: 40vw;
+        height: 20vw;
+    }
+
+    .slider {
+        gap: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container1 {
+        height: 50vw;
+    }
+
+    .review-card {
+        width: 60vw;
+        height: 22vw;
+    }
+}
+
+@media (max-width: 420px) {
+    .slider-container1 {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        gap: 5px;
+        max-width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .review-card {
+        width: 65vw;
+        height: 30vw;
+        flex: 0 0 auto;
+    }
+
+    .prev-button,
+    .next-button {
+        font-size: 30px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .review-author {
+        font-size: 2.3vw;
+    }
+
+    .slider-title {
+        font-size: 4vw;
+        margin-bottom: 4vw;
+    }
+
+    .review-text {
+        font-size: 2vw;
+    }
+}

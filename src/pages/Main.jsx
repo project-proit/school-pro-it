@@ -6,6 +6,8 @@ import SocialMediaQR from '../components/MainComponents/SocialMediaQR/SocialMedi
 import Table from '../components/MainComponents/TableProsCons/Table';
 import VideoBlock from '../components/MainComponents/VideoBlock/VideoBlock';
 import CardsSpecialties from '../components/MainComponents/CardsSpecialties/CardsSpecialties';
+import ReviewsSlider from '../components/MainComponents/RewievsSlider/ReviewsSlider';
+import FotoSlider from '../components/MainComponents/FotoSlider/FotoSlider';
 
 const Main = () => {
   return (
@@ -21,6 +23,8 @@ const Main = () => {
         <CardsSpecialties />
         <Table />
         <VideoBlock />
+        <ReviewsSlider />
+        <FotoSlider />
       </div>
     </div>
   )
