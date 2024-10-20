@@ -132,6 +132,7 @@ const AdminStudents = () => {
             <table>
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Act</th>
                         {columns.map((col, i) => (
                         visibleColumns.includes(col.key) && (
@@ -170,6 +171,7 @@ const AdminStudents = () => {
                 <tbody>
                     {currentRecords.map((record, i) => (
                         <tr className='records' key={i}>
+                            <td>{indexOfFirstRecord + i + 1}</td>
                             <td className='actions-btns'>
                                 <button className='icon-edit' onClick={() => handleEditClick(record)}><RiUserSettingsLine /></button>
                                 <button className='icon-del' onClick={() => deleteRecord(record.id)}><RiUserForbidLine /></button>

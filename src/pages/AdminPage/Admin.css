@@ -164,9 +164,9 @@
 }
 
 .table-container {
-    width: 100%;
-    overflow-x: auto;
-    padding-left: 1vw;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0;
 }
 
 table {
@@ -174,10 +174,12 @@ table {
   background-color: #364374;
   color: #ffff;
   font-size: 1vw;
-  overflow-x: auto; /* прокрутка */
-  width: 100%;
+  width: max-content;
+  min-width: 90%;
+  margin: 0;
   table-layout: auto;
-  margin-left: 0;
+  display: block;
+
 }
 
 .selector-column {
@@ -186,12 +188,12 @@ table {
 
 /* ------------Table------------ */
 td, th {
-  padding:1vw 1vw 1vw 0;
-  /* padding-left: 20px; */
+  padding: 1vw 1vw 1vw 0;
   border: 2px solid transparent;
   box-sizing: border-box;
   white-space: nowrap;
-
+  min-width: 1vw;
+  background-color: #364374;
 }
 
 tr:hover {
