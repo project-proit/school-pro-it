@@ -34,7 +34,7 @@ const FirstFormPage = ({ formData, setFormData }) => {
               <option value="">Выберите город</option>
               <option value="Таганрог">Таганрог</option>
               <option value="Ростов-на-Дону">Ростов-на-Дону</option>
-              <option value="Ейеск">Ейеск</option>
+              <option value="Ейск">Ейск</option>
               <option value="Другой">Другой</option>
           </select>
 
@@ -44,7 +44,7 @@ const FirstFormPage = ({ formData, setFormData }) => {
             setFormData({ ...formData, specialty: event.target.value })
           } required>
               <option value="">Направление</option>
-              <option value="ТагаИскусственный интеллектнрог">Искусственный интеллект</option>
+              <option value="Искусственный интеллект">Искусственный интеллект</option>
               <option value="Web-разработка">Web-разработка</option>
               <option value="Мобильная разработка">Мобильная разработка</option>
               <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>

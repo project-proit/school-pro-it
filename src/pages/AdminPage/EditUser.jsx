@@ -109,7 +109,6 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
             <option value="На рассмотрении">На рассмотрении</option>
             <option value="Принят">Принят</option>
             <option value="Не принят">Не принят</option>
-            <option value="На рассмотрении">На рассмотрении</option>
           </select>
           <select 
             name="specialty" 
@@ -117,7 +116,7 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
             value={formData.specialty}
             onChange={handleInputChange}>
             <option value="">Направление</option>
-            <option value="Таганрог">Искусственный интеллект</option>
+            <option value="Искусственный интеллект">Искусственный интеллект</option>
             <option value="Web-разработка">Web-разработка</option>
             <option value="Мобильная разработка">Мобильная разработка</option>
             <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>
@@ -159,7 +158,7 @@ const EditUser = ({ active, setActive, currentRecord, updateRecord }) => {
             <option value="">Выберите город</option>
             <option value="Таганрог">Таганрог</option>
             <option value="Ростов-на-Дону">Ростов-на-Дону</option>
-            <option value="Ейеск">Ейеск</option>
+            <option value="Ейск">Ейск</option>
             <option value="Другой">Другой</option>
           </select>
           <input

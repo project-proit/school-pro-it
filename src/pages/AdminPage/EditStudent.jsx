@@ -99,7 +99,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               value={formData.specialty}
               onChange={handleInputChange}>
               <option value="">Направление</option>
-              <option value="Таганрог">Искусственный интеллект</option>
+              <option value="Искусственный интеллект">Искусственный интеллект</option>
               <option value="Web-разработка">Web-разработка</option>
               <option value="Мобильная разработка">Мобильная разработка</option>
               <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>
