@@ -129,7 +129,7 @@ const AdminStudents = () => {
             setVisibleColumns={setVisibleColumns}
         /></div>
         <div className='table-container'>
-            <table>
+            <table className='table-admin'>
                 <thead>
                     <tr>
                         <th>#</th>

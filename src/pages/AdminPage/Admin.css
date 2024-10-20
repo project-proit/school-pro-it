@@ -169,7 +169,7 @@
   padding: 0;
 }
 
-table {
+.table-admin {
   border-collapse: collapse;
   background-color: #364374;
   color: #ffff;
@@ -186,7 +186,7 @@ table {
 }
 
 /* ------------Table------------ */
-td, th {
+.table-admin td, th {
   padding: 1vw 1vw 1vw 1vw;
   border: 2px solid transparent;
   box-sizing: border-box;
@@ -195,16 +195,16 @@ td, th {
   background-color: #364374;
 }
 
-tr:hover {
+.table-admin tr:hover {
   background-color: #2E2962;
   outline: 2px solid #ffffff;
 }
 
-td:hover {
+.table-admin td:hover {
   color: #81E7EE;
 }
 
-th {
+.table-admin th {
   padding: 1vw 0;
   background-color: #2E2962;
   white-space: nowrap;

@@ -39,6 +39,9 @@
     color: #ffffff;
     font-size: 1.5vw;
   }
+  .comparison-table tr:hover {
+    outline: 2px solid #ffffff;
+  }
   
   .comparison-table th {
     padding: 1.7vw 4vw;

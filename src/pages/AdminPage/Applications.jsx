@@ -87,6 +87,7 @@ const Applications = ( {setIsAuthenticated} ) => {
     const [visibleColumns, setVisibleColumns] = useState(columns.map(col => col.key));
     const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
     const [filterTypeOfLearning, setFilterTypeOfLearning] = useState('Все');
+    const [filterSpecialty, setFilterSpecialty] = useState('Все');
 
     useEffect(() => {
         customAxios.get(`application/get`)
@@ -121,13 +122,17 @@ const Applications = ( {setIsAuthenticated} ) => {
         }
     };
 
-    // Фильтрация по типу обучения
+    // Фильтрация по типу обучения и направлениям
     const filteredRecords = records.filter(record => {
-        if (filterTypeOfLearning === 'Все') {
-            return true;
+        if (filterTypeOfLearning !== 'Все' && record.typeOfLearning !== filterTypeOfLearning) {
+            return false;
         }
-        return record.typeOfLearning === filterTypeOfLearning;
+        if (filterSpecialty !== 'Все' && record.specialty !== filterSpecialty) {
+            return false;
+        }
+        return true;
     });
+    
 
     // Сортировка записей
     const sortedRecords = filteredRecords.sort((a, b) => {
@@ -183,7 +188,7 @@ const Applications = ( {setIsAuthenticated} ) => {
                     setVisibleColumns={setVisibleColumns}
                 /></div>
                 <div className='table-container'>
-                    <table>
+                    <table className='table-admin'>
                         <thead>
                             <tr>
                                 <th>#</th> 
@@ -211,7 +216,7 @@ const Applications = ( {setIsAuthenticated} ) => {
                                                             <option value="Интенсивы">Интенсивы</option>
                                                         </select>
                                                     </div>
-                                                </th>
+                                                    </th>
                                                 
                                                 ) : (
                                                     <>
