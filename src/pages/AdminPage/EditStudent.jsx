@@ -79,11 +79,11 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
     <div>
       <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
         <div className="modal-content" onClick={e => e.stopPropagation()}>
-          <h2>Изменить заявку!</h2>
+          <h2>Изменить данные ученика!</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>ID</label>
-              <input type="text" name="id" value={formData.id} onChange={handleInputChange} disabled />
+              <input type="text" name="id" value={formData.id} className='modal-id' onChange={handleInputChange} disabled />
             </div>
             <input
               placeholder='ФИО'
@@ -91,6 +91,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               name="fullName"
               value={formData.fullName}
               onChange={handleInputChange}
+              className='modal-input'
             />
             <select 
               name="specialty" 
@@ -113,6 +114,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               name="parentsName"
               value={formData.parentsName}
               onChange={handleInputChange}
+              className='modal-input'
             />
             <input
               placeholder='Возраст'
@@ -120,6 +122,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               name="age"
               value={formData.age}
               onChange={handleInputChange}
+              className='modal-input'
             />
             <select 
               name="typeOfLearning" 
@@ -136,6 +139,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               placeholder='Телефон'
               value={formData.phone}
               onChange={handleInputChange}
+              className='modal-input'
             />
             <input
               type="email"
@@ -143,6 +147,7 @@ const EditStudent = ({ active, setActive, currentRecord, updateRecord }) => {
               placeholder='Email'
               value={formData.email}
               onChange={handleInputChange}
+              className='modal-input'
             />
             <div className="buttons-form-add">
               <button className='btn-submit' type="submit">Сохранить</button>

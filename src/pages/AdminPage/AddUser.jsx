@@ -48,6 +48,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <select 
@@ -83,6 +84,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 name="parentsName"
                 value={formData.parentsName}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <input
@@ -91,6 +93,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 name="age"
                 value={formData.age}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <select 
@@ -121,6 +124,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 placeholder='Телефон'
                 value={formData.phone}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <input
@@ -129,6 +133,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 placeholder='Email'
                 value={formData.email}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <input
@@ -137,6 +142,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 placeholder='Ссылка на соцсети'
                 value={formData.url}
                 onChange={handleChange}
+                className='modal-input'
                 required
             />
             <div className='buttons-form-add'>

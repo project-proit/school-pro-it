@@ -12,23 +12,23 @@ const SocialMediaQR = () => {
         <div className="card">
 
             <h2>Школа ПРО IT в ВК</h2>
-            <a href='https://vk.link/proittaganrog'><p>@tproittaganrogf</p></a>
+            <a href='https://vk.com/proittaganrog' target="_ blank"><p>@tproittaganrogf</p></a>
             <div className="qrcode">
                 <img src={qrcodeVK} alt="QR-код" />
             </div>
             <p>Откройте камерой</p>
-            <ButtonMain size="small" color="secondary">Подписаться</ButtonMain>
+            <a href='https://vk.com/proittaganrog' target="_ blank"><ButtonMain size="small" color="secondary">Подписаться</ButtonMain></a>
 
         </div>
         <div className='line'></div>
         <div className="card">
             <h2>Школа ПРО IT в ТГ</h2>
-            <a href='https://t.me/school_pro_it'><p>@school_pro_it</p></a>
+            <a href='https://t.me/school_pro_it' target="_ blank"><p>@school_pro_it</p></a>
             <div className="qrcode">
             <img src={qrcodeTG} alt="QR-код" />
             </div>
             <p>Откройте камерой</p>
-            <ButtonMain size="small" color="secondary">Подписаться</ButtonMain>
+            <a href='https://t.me/school_pro_it' target="_ blank"><ButtonMain size="small" color="secondary">Подписаться</ButtonMain></a>
         </div>
         </div>
     </div>

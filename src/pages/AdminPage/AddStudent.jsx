@@ -28,8 +28,8 @@ const AddStudent = ({ active, setActive, addRecord }) => {
           // Отправка данных на сервер
           customAxios.post('student/create', formData)
           .then((response) => {
-              addRecord(response.data); // Добавление записи в таблицу
-              setActive(false); // Закрыть модальное окно после успешного добавления
+              addRecord(response.data);
+              setActive(false);
           })
           .catch((error) => {
               console.error("There was an error adding the student!", error);
@@ -41,7 +41,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
         <div className='admin-page'>
             <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
                 <div className="modal-content" onClick={e => e.stopPropagation()}>
-                    <h2>Добавить заявку!</h2>
+                    <h2>Добавить ученика!</h2>
                     <form onSubmit={handleSubmit} className='form-add'>
                         <input
                             placeholder='ФИО'
@@ -49,6 +49,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             name="fullName"
                             value={formData.fullName}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <select 
@@ -73,6 +74,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             name="parentsName"
                             value={formData.parentsName}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <select 
@@ -93,6 +95,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             name="age"
                             value={formData.age}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <select 
@@ -111,6 +114,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             placeholder='Телефон'
                             value={formData.phone}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <input
@@ -119,6 +123,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             placeholder='Email'
                             value={formData.email}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <input
@@ -127,6 +132,7 @@ const AddStudent = ({ active, setActive, addRecord }) => {
                             placeholder='Ссылка на соцсети'
                             value={formData.url}
                             onChange={handleChange}
+                            className='modal-input'
                             required
                         />
                         <div className='buttons-form-add'>

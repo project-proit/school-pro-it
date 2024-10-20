@@ -56,7 +56,7 @@ const AdminStudents = () => {
   };
 
   const deleteRecord = (id) => {
-      const confirmDelete = window.confirm("Вы действительно хотите удалить данную анкету?");
+      const confirmDelete = window.confirm("Вы действительно хотите удалить данного ученика?");
       if (confirmDelete) {
             customAxios.delete(`student/delete/${id}`)
               .then(() => {

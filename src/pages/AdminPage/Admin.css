@@ -139,8 +139,8 @@
 
 .admin-page {
   padding-top: 15vw;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
   display: flex;
   flex-direction: column;
   gap: 1vw;
@@ -166,7 +166,7 @@
 .table-container {
     width: 100%;
     overflow-x: auto;
-    padding-left: 4vw;
+    padding-left: 1vw;
 }
 
 table {
@@ -332,6 +332,9 @@ th {
   .admin-page {
     padding-top: 20vw;
   }
+  .table-container{
+    padding-left: 3vw;
+  }
   .total-applications {
     color: #ffffff;
     display: flex;
@@ -345,8 +348,8 @@ th {
   }
   .admin-page {
     padding-top: 25vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     display: flex;
     flex-direction: column;
     gap: 2vw;
@@ -365,6 +368,9 @@ th {
 @media (max-width: 320px) {
   .table {
     font-size: 4vw;
+  }
+  .table-container{
+    padding-left: 4vw;
   }
   .admin-page {
     padding-top: 35vw;
@@ -391,34 +397,52 @@ th {
 }
 
 .modal-input {
-  padding-left: 2.3rem;
+  padding-left: 3vw;
   border-radius: 3rem;
-  border-color: #BDBCF8;
   border: 3px solid #BDBCF8;
   color: #BDBCF8;
   background-color: white;
-  width: 25vw;
+  width: 30vw;
   height: 5vw;
-  font-size: 1.7rem;
+  font-size: 1.7vw;
   text-align: left;
   cursor: pointer;
+  margin-bottom: 1vw;
 }
 
 .modal-content select {
+  padding-left: 3vw;
   border-radius: 3rem;
-  border-color: #BDBCF8;
   border: 3px solid #BDBCF8;
   color: #BDBCF8;
   background-color: white;
-  height: 8vh;
-  font-size: 1.7rem;
+  width: 30vw;
+  height: 5vw;
+  font-size: 1.7vw;
   text-align: left;
   cursor: pointer;
+  margin-bottom: 1vw;
+}
+
+.modal-id {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-radius: 3rem;
+  border: 3px solid #BDBCF8;
+  color: #BDBCF8;
+  background-color: white;
+  width: 24vw;
+  height: 5vw;
+  font-size: 1.7vw;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 1vw;
 }
 
 .form-add {
+  display: grid;
   padding: 30px 0;
-  gap: 30px;
+  gap: 10vw;
 }
 
 .modal.active {
@@ -428,11 +452,15 @@ th {
 
 .modal-content {
   background-color: white;
-  padding: 70px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3vw;
   border-radius: 30px;
-  min-width: 600px;
-  width: 40vw;
-  max-height: 90%; /* Устанавливаем максимальную высоту контейнера */
+  min-width: 300px;
+  width: 45vw;
+  max-height: 40vw; /* Устанавливаем максимальную высоту контейнера */
   overflow: auto;
 }
 
@@ -440,46 +468,40 @@ th {
   margin-top: 0;
   color: #3D3F68;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.8vw;
   text-align: center;
+  margin-bottom: 2vw;
 }
 
 .form-group label {
-  font-size: 1.7rem;
-  padding: 1rem;
+  font-size: 3vw;
+  padding: 1vw;
   color: #3D3F68;
 }
 
 .modal-content form {
   display: block;
-  margin-bottom: 10px;
 }
 
-/* .modal-content form input, form select {
-  width: 100%;
-  padding: 15px;
-  color:#BDBCF8;
-  margin-bottom: 20px;
-} */
-
 .modal-content button {
-  margin-top: 10px;
+  margin-top: 1vw;
 }
 
 .buttons-form-add {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
 .btn-submit, .btn-cancel {
   color: #ffff;
   border-radius: 50px;
-  min-width: 200px;
-  min-height: 80px;
+  min-width: 100px;
+  min-height: 50px;
   width: 15vw;
   height: 10vh;
-  font-size: 2rem;
+  font-size: 2.5vw;
   cursor: pointer;
 }
 
@@ -499,4 +521,129 @@ th {
   color: #BDBCF8;
   transform: scale(0.95);
   transition: 0.8s all;
+}
+@media (max-width: 1000px) {
+  .modal-content {
+    width: 50vw;
+    max-height: 45vw;
+  }
+  .modal-input {
+    padding-left: 3vw;
+    width: 35vw;
+    height: 6vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .modal-content select {
+    padding-left: 3vw;
+    width: 35vw;
+    height: 6vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  .modal-id {
+    padding-left: 3vw;
+    width: 28vw;
+    height: 6vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+}
+
+@media (max-width: 780px) {
+  .modal-content {
+    width: 60vw;
+    max-height: 60vw;
+  }
+  .modal-input {
+    padding-left: 3vw;
+    width: 40vw;
+    height: 7vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  .modal-id {
+    padding-left: 3vw;
+    width: 32vw;
+    height: 7vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .modal-content select {
+    padding-left: 3vw;
+    width: 40vw;
+    height: 7vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  .btn-submit, .btn-cancel {
+    color: #ffff;
+    border-radius: 50px;
+    min-width: 100px;
+    min-height: 20px;
+    width: 20vw;
+    height: 8vh;
+    font-size: 3vw;
+    cursor: pointer;
+  }
+  .modal-content h2 {
+    font-size: 3.3vw;
+  }
+  .form-add {
+    display: grid;
+    padding: 2vw;
+    gap: 10vw;
+  }
+}
+@media (max-width: 500px) {
+  .modal-content {
+    width: 80vw;
+    max-height: 90vw;
+  }
+  .modal-input {
+    padding-left: 3vw;
+    width: 60vw;
+    height: 10vw;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  .modal-id {
+    padding-left: 3vw;
+    width: 49vw;
+    height: 10vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .modal-content select {
+    padding-left: 3vw;
+    width: 60vw;
+    height: 10vw;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  .btn-submit, .btn-cancel {
+    color: #ffff;
+    border-radius: 50px;
+    min-width: 100px;
+    min-height: 20px;
+    width: 25vw;
+    height: 8vh;
+    font-size: 3vw;
+    cursor: pointer;
+  }
+  .form-group label {
+    font-size: 5vw;
+    padding: 1vw;
+    color: #3D3F68;
+  }
+  .modal-content h2 {
+    font-size: 4vw;
+  }
+  .form-add {
+    display: grid;
+    padding: 4vw;
+  }
 }

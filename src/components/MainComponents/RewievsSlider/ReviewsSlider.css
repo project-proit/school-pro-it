@@ -38,9 +38,13 @@
 }
 
 .review-card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 25vw;
-    height: 14vw;
-    padding: 18px;
+    height: 17vw;
+    padding: 20px;
     border-radius: 10px;
     background-color: #BB71F6;
 }
@@ -48,7 +52,6 @@
 .review-author {
     font-size: 1.3vw;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #ffffff;
 }
 
@@ -87,8 +90,20 @@
     }
 
     .review-card {
-        width: 60vw;
+        width: 50vw;
         height: 22vw;
+    }
+
+    .review-author {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    
+    .review-text {
+        font-size: 1.5vw;
+        line-height: 1.5;
+        color: #ffffff;
     }
 }
 

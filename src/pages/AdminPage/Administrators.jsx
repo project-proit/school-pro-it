@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AdminNavBar1 from './AdminNavBar/AdminNavBar1';
 import customAxios from "../../axios";
+import './Admin.css';
 
 const Administrators = () => {
   const [admins, setAdmins] = useState([]); // Инициализируем пустым массивом
@@ -62,42 +63,48 @@ const Administrators = () => {
     <div>
       <AdminNavBar1 />
       <div className='admin-page'>
-        <h1>Список администраторов</h1>
-        <ul>
-          {admins.length > 0 ? (
-            admins.map(admin => (
-              <li key={admin.id}>
-                {admin.name} ({admin.email}) {admin.isCurrentUser && <strong>(Вы)</strong>}
-                {!admin.isCurrentUser && (
-                  <button onClick={() => deleteAdmin(admin.id)}>Удалить</button>
-                )}
-              </li>
-            ))
-          ) : (
-            <p>Администраторы не найдены</p>
-          )}
-        </ul>
-
-        <h2>Добавить нового администратора</h2>
-        <input
-          type="text"
-          placeholder="Имя"
-          value={newAdmin.name}
-          onChange={(e) => setNewAdmin({ ...newAdmin, name: e.target.value })}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={newAdmin.email}
-          onChange={(e) => setNewAdmin({ ...newAdmin, email: e.target.value })}
-        />
-        <input
-          type="password"
-          placeholder="Пароль"
-          value={newAdmin.password}
-          onChange={(e) => setNewAdmin({ ...newAdmin, password: e.target.value })}
-        />
-        <button onClick={registerAdmin}>Зарегистрировать администратора</button>
+        <div>
+          <h1>Список администраторов</h1>
+          <ul>
+            {admins.length > 0 ? (
+              admins.map(admin => (
+                <li key={admin.id}>
+                  {admin.name} ({admin.email}) {admin.isCurrentUser && <strong>(Вы)</strong>}
+                  {!admin.isCurrentUser && (
+                    <button onClick={() => deleteAdmin(admin.id)}>Удалить</button>
+                  )}
+                </li>
+              ))
+            ) : (
+              <p>Администраторы не найдены</p>
+            )}
+          </ul>
+        </div>
+        <div>
+          <h2>Добавить нового администратора</h2>
+          <input
+            type="text"
+            placeholder="Имя"
+            value={newAdmin.name}
+            className='modal-input'
+            onChange={(e) => setNewAdmin({ ...newAdmin, name: e.target.value })}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={newAdmin.email}
+            className='modal-input'
+            onChange={(e) => setNewAdmin({ ...newAdmin, email: e.target.value })}
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            value={newAdmin.password}
+            className='modal-input'
+            onChange={(e) => setNewAdmin({ ...newAdmin, password: e.target.value })}
+          />
+          <button onClick={registerAdmin}>Зарегистрировать администратора</button>
+        </div>
       </div>
     </div>
   );
