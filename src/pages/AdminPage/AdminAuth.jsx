@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Admin.css';
 
-const AdminAuth = () => {
+const AdminAuth = ({ IsAuthenticated, setIsAuthenticated }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -22,6 +22,7 @@ const AdminAuth = () => {
 
       if (response.ok) {
         localStorage.setItem('authToken', data.token); // Сохраняем токен авторизации
+        setIsAuthenticated = true;
         window.location.href = '/admin'; // Перенаправляем на страницу администратора
       } else {
         setError(data.error || 'Не удалось авторизоваться'); // Выводим сообщение об ошибке

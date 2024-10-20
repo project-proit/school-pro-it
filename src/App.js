@@ -33,8 +33,8 @@ function App() {
 
         {/* Админ панель */}
         <Route path='/admin' element={<LayoutAdmin isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />}>
-          <Route index element={<AdminMain setIsAuthenticated={setIsAuthenticated} />} /> {/* Передаем setIsAuthenticated */}
-          <Route path='auth' element={<AdminAuth setIsAuthenticated={setIsAuthenticated} />} />
+          <Route index element={<AdminMain isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} /> {/* Передаем setIsAuthenticated */}
+          <Route path='auth' element={<AdminAuth isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
           <Route path='students' element={<AdminStudents />} />
           <Route path='administrators' element={<Administrators />} />
           <Route path='add' element={<AddUser />} />

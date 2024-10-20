@@ -25,10 +25,15 @@ const AdminNavBar1 = ({ setIsAuthenticated }) => { // Передаем setIsAuth
   }, []); // Добавляем пустой массив зависимостей, чтобы обработчик добавлялся только один раз
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken'); // Удаляем токен
-    setIsAuthenticated(false); // Обновляем состояние аутентификации
-    navigate('/'); // Перенаправляем на главную страницу
+    localStorage.removeItem('authToken'); // Удаляем токен из локального хранилища
+    if (setIsAuthenticated) {
+      setIsAuthenticated(false); // Обновляем состояние аутентификации
+    } else {
+      console.error('setIsAuthenticated is not provided');
+    }
+    navigate('/admin'); // Перенаправляем на главную страницу
   };
+  
 
   return (
     <div className='header'>

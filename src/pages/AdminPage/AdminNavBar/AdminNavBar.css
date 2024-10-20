@@ -98,6 +98,15 @@ a:hover {
     transition: 0.8s all;
 }
 
+.exit:hover {
+    text-decoration: none;
+    color:#ffff;
+    font-weight: 600;
+    cursor: pointer;
+    transform: scale(1.06);
+    transition: 0.8s all;
+}
+
 .dropdown__menu {
     position:absolute;
     font-size: 1.5vw;
