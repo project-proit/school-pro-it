@@ -648,3 +648,126 @@
     padding: 4vw;
   }
 }
+
+/* Администраторы */
+.administratirs-page {
+  padding: 0 7vw;
+  display: flex;
+  justify-content:space-between;
+}
+.list-admins {
+  font-size: 2vw;
+  color: #ffffff;
+}
+.admin-delete {
+  border-radius: 30px;
+  border: 2px solid #DEA9FF;
+  font-size: 1vw;
+  padding: 0.7vw;
+  background-color: #CD5681;
+  color: #ffffff;
+  cursor: pointer;
+}
+.admin-delete:hover {
+  border: 2px solid #CD5681;
+  background-color: #CD5681;
+  transform: scale(0.95);
+  transition: 0.8s all;
+}
+.title-admins {
+  width: 30vw;
+  text-align: center;
+  font-size: 2vw;
+  color: #ffffff;
+}
+.new-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-bottom: 10vw;
+}
+.btn-new-admin {
+  border-radius: 3rem;
+  border: 3px solid #81E7EE;
+  color: #015073;
+  font-weight: 500;
+  text-align: center;
+  background-color: #81E7EE;
+  width: 30vw;
+  height: 5vw;
+  font-size: 1.7vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal-input-admin {
+  padding-left: 3vw;
+  border-radius: 3rem;
+  border: 3px solid #BDBCF8;
+  color: #BDBCF8;
+  background-color: white;
+  width: 30vw;
+  height: 5vw;
+  font-size: 1.7vw;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 1vw;
+}
+
+@media (max-width: 500px) {
+  .administratirs-page {
+    padding: 0 7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+  }
+
+  .list-admins {
+    font-size: 3vw;
+    color: #ffffff;
+  }
+
+  .title-admins {
+    width: 60vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    color: #ffffff;
+  }
+  .new-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-bottom: 20vw;
+  }
+  .btn-new-admin {
+    border-radius: 3rem;
+    border: 3px solid #81E7EE;
+    color: #015073;
+    font-weight: 500;
+    text-align: center;
+    background-color: #81E7EE;
+    width: 60vw;
+    height: 12vw;
+    font-size: 4vw;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .modal-input-admin {
+    padding-left: 3vw;
+    border-radius: 3rem;
+    border: 3px solid #BDBCF8;
+    color: #BDBCF8;
+    background-color: white;
+    width: 60vw;
+    height: 12vw;
+    font-size: 4vw;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 1vw;
+  }
+}

@@ -40,7 +40,7 @@ const Applications = ( {setIsAuthenticated} ) => {
             return customAxios.post(`student/create`, studentData);
         }
         else {
-            return Promise.resolve();
+            return Promise.reject('Пользователь отменил добавление');
         }
     };
 
@@ -49,7 +49,8 @@ const Applications = ( {setIsAuthenticated} ) => {
     }, [records]);
     
     const handleAcceptClick = (record) => {
-        if (record.status === 'Принят') return;
+        if (record.status === 'Принят') return;  // Если уже принят, не делаем ничего
+    
         const studentData = {
             fullName: record.fullName,
             typeOfLearning: record.typeOfLearning,
@@ -62,25 +63,25 @@ const Applications = ( {setIsAuthenticated} ) => {
             url: record.url,
         };
     
-        // Добавляем студента в таблицу "Students"
+        // Пытаемся добавить студента
         addStudent(studentData)
             .then(() => {
-                customAxios.put(`application/${record.id}`, { status: 'Принят' })
-                    .then(() => {
-                        setRecords(prevRecords =>
-                            prevRecords.map(r =>
-                                r.id === record.id ? { ...r, status: 'Принят' } : r
-                            )
-                        );
-                        console.log("Состояние после изменения:", records);
-                    })
-                    .catch(err => {
-                        console.error("Ошибка при обновлении статуса заявки:", err);
-                    });
+                // После успешного добавления студента, обновляем статус заявки
+                return customAxios.put(`application/${record.id}`, { status: 'Принят' });
+            })
+            .then(() => {
+                // Обновляем локальные записи
+                setRecords(prevRecords =>
+                    prevRecords.map(r =>
+                        r.id === record.id ? { ...r, status: 'Принят' } : r
+                    )
+                );
+                console.log("Состояние после изменения:", records);
             })
             .catch(err => {
-                console.error("Ошибка при добавлении студента:", err);
-        });
+                // Если ошибка (или отказ пользователя), выводим сообщение
+                console.error("Ошибка при добавлении студента или обновлении статуса:", err);
+            });
     };
 
     // фильтры, сортировка, выбор столбцов

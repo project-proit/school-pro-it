@@ -69,7 +69,7 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 onChange={handleChange}
                 required>
                 <option value="">Направление</option>
-                <option value="Таганрог">Искусственный интеллект</option>
+                <option value="Искусственный интеллект">Искусственный интеллект</option>
                 <option value="Web-разработка">Web-разработка</option>
                 <option value="Мобильная разработка">Мобильная разработка</option>
                 <option value="Проектирование нейроинтерфейсов">Проектирование нейроинтерфейсов</option>
@@ -85,7 +85,6 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 value={formData.parentsName}
                 onChange={handleChange}
                 className='modal-input'
-                required
             />
             <input
                 placeholder='Возраст'
@@ -143,7 +142,6 @@ const AddUser = ({ active, setActive, addRecord }) => {
                 value={formData.url}
                 onChange={handleChange}
                 className='modal-input'
-                required
             />
             <div className='buttons-form-add'>
                 <button className='btn-submit'type="submit">Добавить</button>
